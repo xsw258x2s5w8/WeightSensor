@@ -132,7 +132,7 @@
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QPushButton" name="pushButton_10">
+        <widget class="QPushButton" name="unmanned">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -140,7 +140,7 @@
           </size>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>wurenzhishou</string>
          </property>
         </widget>
        </item>

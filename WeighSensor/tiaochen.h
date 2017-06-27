@@ -19,7 +19,8 @@ private:
     Ui::Tiaochen *ui;
 
 public slots:
-    void showMenuWidget();//zhuye
+    void returnIndex();//zhuye
+    void returnPage();//fanhuicaidan
 };
 
 #endif // TIAOCHEN_H

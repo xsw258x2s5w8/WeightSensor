@@ -22,7 +22,8 @@ public slots:
     void returnIndex();//zhuye
     void showPermission();//quanxianye
     void returnPage();//zhuye
-    void showAdjustable();
+    void showAdjustable();//tiaochen
+    void showUnmanned();//wurenzhishou
 };
 
 #endif // PAGE2_H
