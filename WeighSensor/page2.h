@@ -19,8 +19,10 @@ private:
     Ui::page2 *ui;
 
 public slots:
-    void returnIndex();
-    void showPermission();
+    void returnIndex();//zhuye
+    void showPermission();//quanxianye
+    void returnPage();//zhuye
+    void showAdjustable();
 };
 
 #endif // PAGE2_H

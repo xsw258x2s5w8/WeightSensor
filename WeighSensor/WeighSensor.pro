@@ -15,12 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         index.cpp \
     page2.cpp \
-    page1.cpp
+    page1.cpp \
+    tiaochen.cpp
 
 HEADERS  += index.h \
     page2.h \
-    page1.h
+    page1.h \
+    tiaochen.h
 
 FORMS    += index.ui \
     page2.ui \
-    page1.ui
+    page1.ui \
+    tiaochen.ui

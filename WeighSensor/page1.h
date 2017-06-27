@@ -18,7 +18,8 @@ public:
 private:
     Ui::page1 *ui;
 public slots:
-    void returnIndex();
+    void returnIndex();//zhuye
+    void returnPage();//fanhuicaidan
 };
 
 #endif // PAGE1_H

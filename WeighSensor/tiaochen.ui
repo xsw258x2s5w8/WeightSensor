@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>page2</class>
- <widget class="QWidget" name="page2">
+ <class>Tiaochen</class>
+ <widget class="QWidget" name="Tiaochen">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>630</width>
-    <height>351</height>
+    <width>728</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,37 +18,37 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QLabel" name="label_10">
+      <widget class="QLabel" name="label_14">
        <property name="text">
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_11">
+      <widget class="QLabel" name="label_15">
        <property name="text">
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_12">
+      <widget class="QLabel" name="label_16">
        <property name="text">
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_13">
+      <widget class="QLabel" name="label_17">
        <property name="text">
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_2">
+      <spacer name="horizontalSpacer_4">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -61,7 +61,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QTimeEdit" name="timeEdit"/>
+      <widget class="QTimeEdit" name="timeEdit_2"/>
      </item>
     </layout>
    </item>
@@ -79,34 +79,38 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>595</width>
-        <height>245</height>
+        <x>20</x>
+        <y>10</y>
+        <width>671</width>
+        <height>234</height>
        </rect>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <property name="sizeConstraint">
-        <enum>QLayout::SetDefaultConstraint</enum>
-       </property>
+      <layout class="QGridLayout" name="gridLayout_2" rowminimumheight="1,2,1">
        <property name="margin">
         <number>20</number>
        </property>
        <property name="spacing">
         <number>20</number>
        </property>
-       <item row="0" column="4" rowspan="2">
-        <widget class="QLabel" name="label_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>tiaochen</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4" rowspan="3">
+        <widget class="QLabel" name="label_4">
          <property name="text">
           <string>TextLabel</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="permission">
+       <item row="1" column="0">
+        <widget class="QPushButton" name="permission_2">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -118,60 +122,8 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="adjustable">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>tiaochen</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QPushButton" name="pushButton_10">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QPushButton" name="pushButton_11">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_12">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_13">
+        <widget class="QPushButton" name="pushButton_16">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -184,7 +136,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_14">
+        <widget class="QPushButton" name="pushButton_17">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -197,7 +149,59 @@
         </widget>
        </item>
        <item row="1" column="3">
-        <widget class="QPushButton" name="pushButton_15">
+        <widget class="QPushButton" name="pushButton_18">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>66</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton_19">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>66</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_20">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>66</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pushButton_21">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>66</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="pushButton_22">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -214,9 +218,9 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QPushButton" name="returnIndex">
+      <widget class="QPushButton" name="returnIndex_2">
        <property name="font">
         <font>
          <family>AR PL UMing TW MBE</family>
@@ -231,7 +235,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="horizontalSpacer_3">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -244,7 +248,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="returnPage">
+      <widget class="QPushButton" name="returnPage_2">
        <property name="text">
         <string>shangyiye</string>
        </property>

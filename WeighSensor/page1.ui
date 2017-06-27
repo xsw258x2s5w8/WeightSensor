@@ -169,7 +169,7 @@
         </font>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>fanhui</string>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -190,9 +190,12 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QPushButton" name="returnPage">
        <property name="text">
-        <string>TextLabel</string>
+        <string>shangyiye</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
