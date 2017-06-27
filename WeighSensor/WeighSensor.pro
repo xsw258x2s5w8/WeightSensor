@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         index.cpp \
-    page2.cpp
+    page2.cpp \
+    page1.cpp
 
 HEADERS  += index.h \
-    page2.h
+    page2.h \
+    page1.h
 
 FORMS    += index.ui \
-    page2.ui
+    page2.ui \
+    page1.ui

@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,0">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
@@ -106,7 +106,7 @@
         </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="permission">
          <property name="minimumSize">
           <size>
            <width>66</width>

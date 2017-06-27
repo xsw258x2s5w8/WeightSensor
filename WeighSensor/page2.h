@@ -20,6 +20,7 @@ private:
 
 public slots:
     void returnIndex();
+    void showPermission();
 };
 
 #endif // PAGE2_H
