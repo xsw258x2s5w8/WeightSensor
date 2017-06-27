@@ -634,7 +634,12 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="menu">
+        <property name="font">
+         <font>
+          <family>Bitstream Charter</family>
+         </font>
+        </property>
         <property name="text">
          <string>菜单</string>
         </property>

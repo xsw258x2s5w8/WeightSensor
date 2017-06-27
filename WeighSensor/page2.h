@@ -17,6 +17,9 @@ public:
     
 private:
     Ui::page2 *ui;
+
+public slots:
+    void returnIndex();
 };
 
 #endif // PAGE2_H

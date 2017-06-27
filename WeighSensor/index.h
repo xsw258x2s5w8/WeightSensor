@@ -17,6 +17,9 @@ public:
     
 private:
     Ui::Index *ui;
+
+public slots:
+    void showMenuWidget();
 };
 
 #endif // INDEX_H
