@@ -17,16 +17,22 @@ SOURCES += main.cpp\
     page2.cpp \
     page1.cpp \
     tiaochen.cpp \
-    wurenzhishou.cpp
+    wurenzhishou.cpp \
+    jiance.cpp \
+    shipinshezhi.cpp
 
 HEADERS  += index.h \
     page2.h \
     page1.h \
     tiaochen.h \
-    wurenzhishou.h
+    wurenzhishou.h \
+    jiance.h \
+    shipinshezhi.h
 
 FORMS    += index.ui \
     page2.ui \
     page1.ui \
     tiaochen.ui \
-    wurenzhishou.ui
+    wurenzhishou.ui \
+    jiance.ui \
+    shipinshezhi.ui

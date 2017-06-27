@@ -24,6 +24,8 @@ public slots:
     void returnPage();//zhuye
     void showAdjustable();//tiaochen
     void showUnmanned();//wurenzhishou
+    void showCheck();//jiance
+    void showVideo();//shipinshezhi
 };
 
 #endif // PAGE2_H
