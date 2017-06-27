@@ -657,7 +657,7 @@
       <item>
        <widget class="QPushButton" name="pushButton_7">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="text">
          <string>去皮</string>
@@ -688,8 +688,6 @@
      </layout>
     </item>
    </layout>
-   <zorder>widget_2</zorder>
-   <zorder></zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
