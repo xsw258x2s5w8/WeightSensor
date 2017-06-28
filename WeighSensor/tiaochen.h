@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan
+    void showAddress();
 };
 
 #endif // TIAOCHEN_H

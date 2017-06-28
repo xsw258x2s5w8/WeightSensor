@@ -2,6 +2,7 @@
 #include "ui_tiaochen.h"
 #include "index.h"
 #include "page2.h"
+#include "dizhi.h"
 
 Tiaochen::Tiaochen(QWidget *parent) :
     QWidget(parent),
@@ -10,6 +11,7 @@ Tiaochen::Tiaochen(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->returnIndex_2,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
+    connect(ui->address,SIGNAL(clicked()),this,SLOT(showAddress()));
 }
 
 Tiaochen::~Tiaochen()
@@ -28,6 +30,13 @@ void Tiaochen::returnPage()
 {
     page2 *returnPage=new page2();
     returnPage->show();
+    this->close();
+}
+
+void Tiaochen::showAddress()
+{
+    Dizhi *showAddress=new Dizhi();
+    showAddress->show();
     this->close();
 }
 

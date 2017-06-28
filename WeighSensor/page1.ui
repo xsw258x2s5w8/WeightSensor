@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>605</width>
-    <height>410</height>
+    <width>648</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,30 +20,30 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <widget class="QLabel" name="label_18">
+      <widget class="QPushButton" name="pushButton_4">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标1</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_19">
+      <widget class="QPushButton" name="pushButton_6">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标2</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_20">
+      <widget class="QPushButton" name="pushButton_5">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标3</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_21">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标4</string>
        </property>
       </widget>
      </item>
@@ -90,7 +90,7 @@
           <item>
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>权限：</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -98,7 +98,18 @@
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox">
+           <widget class="QComboBox" name="permissionComboBox">
+            <property name="font">
+             <font>
+              <family>Bitstream Charter</family>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
             <property name="currentIndex">
              <number>-1</number>
             </property>
@@ -117,7 +128,7 @@
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>密码：</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -141,14 +152,14 @@
           <item>
            <widget class="QPushButton" name="pushButton">
             <property name="text">
-             <string>PushButton</string>
+             <string>设置</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_2">
             <property name="text">
-             <string>PushButton</string>
+             <string>忘记密码</string>
             </property>
            </widget>
           </item>

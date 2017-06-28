@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Erweimaguanli</class>
- <widget class="QWidget" name="Erweimaguanli">
+ <class>Dangeshedizhi</class>
+ <widget class="QWidget" name="Dangeshedizhi">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
-    <height>482</height>
+    <width>803</width>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
-  </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,5,1">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_10">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QLabel" name="label_22">
+      <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标1</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_23">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标2</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_24">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标3</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_25">
+      <widget class="QPushButton" name="pushButton_4">
        <property name="text">
-        <string>TextLabel</string>
+        <string>图标4</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_8">
+      <spacer name="horizontalSpacer_4">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -61,7 +70,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QTimeEdit" name="timeEdit_4"/>
+      <widget class="QTimeEdit" name="timeEdit_2"/>
      </item>
     </layout>
    </item>
@@ -79,58 +88,49 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
-        <width>75</width>
-        <height>22</height>
+        <y>20</y>
+        <width>171</width>
+        <height>27</height>
        </rect>
       </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
-       <string>erweimaguanli</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <string>单个设置传感器地址</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QWidget" name="widget_2" native="true">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>38</y>
-        <width>100</width>
-        <height>81</height>
+        <x>140</x>
+        <y>70</y>
+        <width>521</width>
+        <height>231</height>
        </rect>
       </property>
-      <property name="text">
-       <string>shengcheng</string>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>116</x>
-        <y>38</y>
-        <width>100</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>chaxun</string>
-      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>90</y>
+         <width>261</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>请单独接1只数字传感器</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QPushButton" name="returnIndex">
        <property name="font">
@@ -147,7 +147,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_7">
+      <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -160,7 +160,27 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="returnPage_2">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="returnPage">
        <property name="text">
         <string>shangyiye</string>
        </property>

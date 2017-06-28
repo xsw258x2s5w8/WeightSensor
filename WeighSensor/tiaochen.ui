@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>728</width>
-    <height>382</height>
+    <width>648</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -79,13 +79,13 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>20</x>
         <y>10</y>
         <width>671</width>
-        <height>234</height>
+        <height>239</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_2" rowminimumheight="1,2,1">
@@ -98,7 +98,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>tiaochen</string>
+          <string>调秤</string>
          </property>
         </widget>
        </item>
@@ -110,7 +110,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QPushButton" name="permission_2">
+        <widget class="QPushButton" name="address">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -118,7 +118,7 @@
           </size>
          </property>
          <property name="text">
-          <string>quanxian</string>
+          <string>地址</string>
          </property>
         </widget>
        </item>

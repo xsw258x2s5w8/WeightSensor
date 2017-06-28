@@ -1,3 +1,4 @@
+#include <QtGui/QApplication>
 #include "page1.h"
 #include "ui_page1.h"
 #include "index.h"
@@ -8,6 +9,11 @@ page1::page1(QWidget *parent) :
     ui(new Ui::page1)
 {
     ui->setupUi(this);
+    //combox 属性条目
+    QStringList strings;
+    strings<<tr("user")<<tr("weigher")<<tr("producer");
+    ui->permissionComboBox->addItems(strings);
+
     connect(ui->returnIndex_3,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
 }

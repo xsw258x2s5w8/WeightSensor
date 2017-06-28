@@ -22,7 +22,9 @@ SOURCES += main.cpp\
     shipinshezhi.cpp \
     erweimaguanli.cpp \
     dayin.cpp \
-    page3.cpp
+    page3.cpp \
+    dizhi.cpp \
+    dangeshedizhi.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -33,7 +35,9 @@ HEADERS  += index.h \
     shipinshezhi.h \
     erweimaguanli.h \
     dayin.h \
-    page3.h
+    page3.h \
+    dizhi.h \
+    dangeshedizhi.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -44,4 +48,8 @@ FORMS    += index.ui \
     shipinshezhi.ui \
     erweimaguanli.ui \
     dayin.ui \
-    page3.ui
+    page3.ui \
+    dizhi.ui \
+    dangeshedizhi.ui
+
+TRANSLATIONS =WeighSensor.ts

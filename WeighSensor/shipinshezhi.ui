@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,5,1">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_22">
@@ -95,13 +98,13 @@
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>40</y>
         <width>327</width>
-        <height>140</height>
+        <height>160</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
