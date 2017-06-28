@@ -2,6 +2,7 @@
 #include "ui_dangeshedizhi.h"
 #include "dizhi.h"
 #include "index.h"
+#include "shezhi.h"
 
 Dangeshedizhi::Dangeshedizhi(QWidget *parent) :
     QWidget(parent),
@@ -10,6 +11,7 @@ Dangeshedizhi::Dangeshedizhi(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
+    connect(ui->scanning,SIGNAL(clicked()),this,SLOT(showScan()));
 }
 
 Dangeshedizhi::~Dangeshedizhi()
@@ -28,5 +30,12 @@ void Dangeshedizhi::returnPage()
 {
     Dizhi *returnPage=new Dizhi();
     returnPage->show();
+    this->close();
+}
+
+void Dangeshedizhi::showScan()
+{
+    Shezhi *showScan=new Shezhi();
+    showScan->show();
     this->close();
 }

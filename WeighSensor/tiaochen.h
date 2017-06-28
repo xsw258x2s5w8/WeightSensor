@@ -21,7 +21,8 @@ private:
 public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan
-    void showAddress();
+    void showAddress();//设置地址界面
+    void showAdjustAngle();//调角界面
 };
 
 #endif // TIAOCHEN_H

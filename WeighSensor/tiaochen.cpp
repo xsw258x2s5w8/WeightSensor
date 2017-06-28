@@ -3,6 +3,7 @@
 #include "index.h"
 #include "page2.h"
 #include "dizhi.h"
+#include "tiaojiao.h"
 
 Tiaochen::Tiaochen(QWidget *parent) :
     QWidget(parent),
@@ -12,6 +13,7 @@ Tiaochen::Tiaochen(QWidget *parent) :
     connect(ui->returnIndex_2,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->address,SIGNAL(clicked()),this,SLOT(showAddress()));
+    connect(ui->adjustAngle,SIGNAL(clicked()),this,SLOT(showAdjustAngle()));
 }
 
 Tiaochen::~Tiaochen()
@@ -36,6 +38,13 @@ void Tiaochen::returnPage()
 void Tiaochen::showAddress()
 {
     Dizhi *showAddress=new Dizhi();
+    showAddress->show();
+    this->close();
+}
+
+void Tiaochen::showAdjustAngle()
+{
+    Tiaojiao *showAddress=new Tiaojiao();
     showAddress->show();
     this->close();
 }

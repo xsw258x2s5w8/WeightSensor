@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showScan();//扫描设置界面
 };
 
 #endif // DANGESHEDIZHI_H

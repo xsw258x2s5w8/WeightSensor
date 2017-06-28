@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dangeshedizhi</class>
- <widget class="QWidget" name="Dangeshedizhi">
+ <class>Shezhi</class>
+ <widget class="QWidget" name="Shezhi">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5,1">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
@@ -104,31 +104,68 @@
        <string>单个设置传感器地址</string>
       </property>
      </widget>
-     <widget class="QWidget" name="widget_2" native="true">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>70</y>
-        <width>521</width>
-        <height>231</height>
+        <x>120</x>
+        <y>80</y>
+        <width>331</width>
+        <height>171</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>90</y>
-         <width>261</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>请单独接1只数字传感器</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>传感器协议</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,2">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>当前地址</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>新地址</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_3"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -163,9 +200,9 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="scanning">
+      <widget class="QPushButton" name="dsfs">
        <property name="text">
-        <string>扫描</string>
+        <string>dsfsd</string>
        </property>
       </widget>
      </item>
