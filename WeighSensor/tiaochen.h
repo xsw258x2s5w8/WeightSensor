@@ -23,6 +23,7 @@ public slots:
     void returnPage();//fanhuicaidan
     void showAddress();//设置地址界面
     void showAdjustAngle();//调角界面
+    void showBalanceState();//显示秤台状态界面
 };
 
 #endif // TIAOCHEN_H

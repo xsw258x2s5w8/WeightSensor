@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showSetWeight();//输入重量调角界面
 };
 
 #endif // SHUZHONGLIANGTIAOJIAO_H

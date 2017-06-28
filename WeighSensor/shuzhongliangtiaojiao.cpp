@@ -2,6 +2,7 @@
 #include "ui_shuzhongliangtiaojiao.h"
 #include "index.h"
 #include "tiaojiao.h"
+#include "shuruzhongliang.h"
 
 Shuzhongliangtiaojiao::Shuzhongliangtiaojiao(QWidget *parent) :
     QWidget(parent),
@@ -10,6 +11,7 @@ Shuzhongliangtiaojiao::Shuzhongliangtiaojiao(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
+    connect(ui->confirm,SIGNAL(clicked()),this,SLOT(showSetWeight()));
 }
 
 Shuzhongliangtiaojiao::~Shuzhongliangtiaojiao()
@@ -28,5 +30,12 @@ void Shuzhongliangtiaojiao::returnPage()
 {
     Tiaojiao *returnPage=new Tiaojiao();
     returnPage->show();
+    this->close();
+}
+
+void Shuzhongliangtiaojiao::showSetWeight()
+{
+    Shuruzhongliang *showSetWeight=new Shuruzhongliang();
+    showSetWeight->show();
     this->close();
 }
