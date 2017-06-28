@@ -24,6 +24,8 @@ public slots:
     void showAddress();//设置地址界面
     void showAdjustAngle();//调角界面
     void showBalanceState();//显示秤台状态界面
+    void showBalanceValue();//显示秤台参数界面
+    void showtiaochen_2();//显示调秤下一页
 };
 
 #endif // TIAOCHEN_H

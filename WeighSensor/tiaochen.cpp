@@ -5,6 +5,8 @@
 #include "dizhi.h"
 #include "tiaojiao.h"
 #include "chengtaizhuangtai.h"
+#include "chengtaicanshu.h"
+#include "tiaochen_2.h"
 
 Tiaochen::Tiaochen(QWidget *parent) :
     QWidget(parent),
@@ -16,6 +18,8 @@ Tiaochen::Tiaochen(QWidget *parent) :
     connect(ui->address,SIGNAL(clicked()),this,SLOT(showAddress()));
     connect(ui->adjustAngle,SIGNAL(clicked()),this,SLOT(showAdjustAngle()));
     connect(ui->balanceState,SIGNAL(clicked()),this,SLOT(showBalanceState()));
+    connect(ui->balanceValue,SIGNAL(clicked()),this,SLOT(showBalanceValue()));
+    connect(ui->next,SIGNAL(clicked()),this,SLOT(showtiaochen_2()));
 }
 
 Tiaochen::~Tiaochen()
@@ -55,6 +59,20 @@ void Tiaochen::showBalanceState()
 {
     Chengtaizhuangtai *showBalanceState=new Chengtaizhuangtai();
     showBalanceState->show();
+    this->close();
+}
+
+void Tiaochen::showBalanceValue()
+{
+    Chengtaicanshu *showBalanceValue=new Chengtaicanshu();
+    showBalanceValue->show();
+    this->close();
+}
+
+void Tiaochen::showtiaochen_2()
+{
+    Tiaochen_2 *showtiaochen_2=new Tiaochen_2();
+    showtiaochen_2->show();
     this->close();
 }
 

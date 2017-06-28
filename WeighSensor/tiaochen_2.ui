@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Tiaochen</class>
- <widget class="QWidget" name="Tiaochen">
+ <class>Tiaochen_2</class>
+ <widget class="QWidget" name="Tiaochen_2">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -79,21 +79,8 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0" columnstretch="2,2,2,2,1,0" rowminimumheight="1,2,2">
-      <item row="2" column="3">
-       <widget class="QPushButton" name="pushButton_22">
-        <property name="minimumSize">
-         <size>
-          <width>66</width>
-          <height>66</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="1,2,2,2,2,0">
+      <item row="1" column="2">
        <widget class="QPushButton" name="adjustAngle">
         <property name="minimumSize">
          <size>
@@ -102,40 +89,11 @@
          </size>
         </property>
         <property name="text">
-         <string>调角</string>
+         <string>sdfs</string>
         </property>
        </widget>
       </item>
       <item row="1" column="4">
-       <widget class="QPushButton" name="next">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>next</string>
-        </property>
-        <property name="flat">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>调秤</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
        <widget class="QPushButton" name="balanceValue">
         <property name="minimumSize">
          <size>
@@ -144,37 +102,11 @@
          </size>
         </property>
         <property name="text">
-         <string>秤台参数</string>
+         <string>sdfsdf</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="pushButton_20">
-        <property name="minimumSize">
-         <size>
-          <width>66</width>
-          <height>66</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="address">
-        <property name="minimumSize">
-         <size>
-          <width>66</width>
-          <height>66</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>地址</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
+      <item row="1" column="3">
        <widget class="QPushButton" name="balanceState">
         <property name="minimumSize">
          <size>
@@ -183,33 +115,43 @@
          </size>
         </property>
         <property name="text">
-         <string>秤台状态</string>
+         <string>ewrwe</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="address">
+        <property name="minimumSize">
+         <size>
+          <width>66</width>
+          <height>66</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>dfsf</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>调秤</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QPushButton" name="pushButton_19">
-        <property name="minimumSize">
-         <size>
-          <width>66</width>
-          <height>66</height>
-         </size>
+       <widget class="QPushButton" name="preview">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>preview</string>
         </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QPushButton" name="pushButton_21">
-        <property name="minimumSize">
-         <size>
-          <width>66</width>
-          <height>66</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
