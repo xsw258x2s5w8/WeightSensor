@@ -7,6 +7,7 @@
 #include "chengtaizhuangtai.h"
 #include "chengtaicanshu.h"
 #include "tiaochen_2.h"
+#include "biaoding.h"
 
 Tiaochen::Tiaochen(QWidget *parent) :
     QWidget(parent),
@@ -20,6 +21,7 @@ Tiaochen::Tiaochen(QWidget *parent) :
     connect(ui->balanceState,SIGNAL(clicked()),this,SLOT(showBalanceState()));
     connect(ui->balanceValue,SIGNAL(clicked()),this,SLOT(showBalanceValue()));
     connect(ui->next,SIGNAL(clicked()),this,SLOT(showtiaochen_2()));
+    connect(ui->calibration,SIGNAL(clicked()),this,SLOT(showCalibration()));
 }
 
 Tiaochen::~Tiaochen()
@@ -73,6 +75,13 @@ void Tiaochen::showtiaochen_2()
 {
     Tiaochen_2 *showtiaochen_2=new Tiaochen_2();
     showtiaochen_2->show();
+    this->close();
+}
+
+void Tiaochen::showCalibration()
+{
+    Biaoding *showCalibration=new Biaoding();
+    showCalibration->show();
     this->close();
 }
 

@@ -188,7 +188,7 @@
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QPushButton" name="pushButton_19">
+       <widget class="QPushButton" name="calibration">
         <property name="minimumSize">
          <size>
           <width>66</width>
@@ -196,7 +196,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>标定</string>
         </property>
        </widget>
       </item>
