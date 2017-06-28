@@ -24,6 +24,7 @@ public slots:
     void showSetAngleValue();//显示输入系数调角页面
     void showautoSetAnglevalue();//进入自动调角差的界面
     void showautoSetAxisAngle();//进入自动轴角差
+    void showautoSetWeight();//进入输入调角界面
 };
 
 #endif // TIAOJIAO_H

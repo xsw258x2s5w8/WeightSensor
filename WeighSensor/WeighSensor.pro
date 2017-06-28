@@ -32,7 +32,8 @@ SOURCES += main.cpp\
     zidongtiaojiaocha.cpp \
     yajiaoqueren.cpp \
     zidongzhoujiaocha.cpp \
-    yazhouqueren.cpp
+    yazhouqueren.cpp \
+    shuzhongliangtiaojiao.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -53,7 +54,8 @@ HEADERS  += index.h \
     zidongtiaojiaocha.h \
     yajiaoqueren.h \
     zidongzhoujiaocha.h \
-    yazhouqueren.h
+    yazhouqueren.h \
+    shuzhongliangtiaojiao.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -74,6 +76,7 @@ FORMS    += index.ui \
     zidongtiaojiaocha.ui \
     yajiaoqueren.ui \
     zidongzhoujiaocha.ui \
-    yazhouqueren.ui
+    yazhouqueren.ui \
+    shuzhongliangtiaojiao.ui
 
 TRANSLATIONS =WeighSensor.ts

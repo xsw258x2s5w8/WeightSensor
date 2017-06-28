@@ -5,6 +5,7 @@
 #include "shuruxishutioajiao.h"
 #include "zidongtiaojiaocha.h"
 #include "zidongzhoujiaocha.h"
+#include "shuzhongliangtiaojiao.h"
 
 Tiaojiao::Tiaojiao(QWidget *parent) :
     QWidget(parent),
@@ -16,6 +17,7 @@ Tiaojiao::Tiaojiao(QWidget *parent) :
     connect(ui->setAngleValue,SIGNAL(clicked()),this,SLOT(showSetAngleValue()));
     connect(ui->autoSetAngleValue,SIGNAL(clicked()),this,SLOT(showautoSetAnglevalue()));
     connect(ui->autoSetAxisAngle,SIGNAL(clicked()),this,SLOT(showautoSetAxisAngle()));
+    connect(ui->setWeight,SIGNAL(clicked()),this,SLOT(showautoSetWeight()));
 }
 
 Tiaojiao::~Tiaojiao()
@@ -55,5 +57,12 @@ void Tiaojiao::showautoSetAxisAngle()
 {
     Zidongzhoujiaocha *showautoSetAxisAngle=new Zidongzhoujiaocha();
     showautoSetAxisAngle->show();
+    this->close();
+}
+
+void Tiaojiao::showautoSetWeight()
+{
+    Shuzhongliangtiaojiao *showautoSetWeight=new Shuzhongliangtiaojiao();
+    showautoSetWeight->show();
     this->close();
 }
