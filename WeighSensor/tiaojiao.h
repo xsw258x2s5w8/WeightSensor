@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showSetAngleValue();//显示输入系数调角页面
 };
 
 #endif // TIAOJIAO_H

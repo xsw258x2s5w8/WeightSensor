@@ -30,7 +30,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="showAngle">
        <property name="text">
         <string>图标2</string>
        </property>
@@ -108,7 +108,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QPushButton" name="setSingleAddress">
+         <widget class="QPushButton" name="setAngleValue">
           <property name="minimumSize">
            <size>
             <width>66</width>
@@ -116,7 +116,7 @@
            </size>
           </property>
           <property name="text">
-           <string>dsf</string>
+           <string>输入系数调角</string>
           </property>
          </widget>
         </item>
