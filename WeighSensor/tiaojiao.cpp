@@ -3,6 +3,8 @@
 #include "index.h"
 #include "tiaochen.h"
 #include "shuruxishutioajiao.h"
+#include "zidongtiaojiaocha.h"
+#include "zidongzhoujiaocha.h"
 
 Tiaojiao::Tiaojiao(QWidget *parent) :
     QWidget(parent),
@@ -12,6 +14,8 @@ Tiaojiao::Tiaojiao(QWidget *parent) :
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->setAngleValue,SIGNAL(clicked()),this,SLOT(showSetAngleValue()));
+    connect(ui->autoSetAngleValue,SIGNAL(clicked()),this,SLOT(showautoSetAnglevalue()));
+    connect(ui->autoSetAxisAngle,SIGNAL(clicked()),this,SLOT(showautoSetAxisAngle()));
 }
 
 Tiaojiao::~Tiaojiao()
@@ -37,5 +41,19 @@ void Tiaojiao::showSetAngleValue()
 {
     Shuruxishutioajiao *showSetAngleValue=new Shuruxishutioajiao();
     showSetAngleValue->show();
+    this->close();
+}
+
+void Tiaojiao::showautoSetAnglevalue()
+{
+    Zidongtiaojiaocha *showautoSetAnglevalue=new Zidongtiaojiaocha();
+    showautoSetAnglevalue->show();
+    this->close();
+}
+
+void Tiaojiao::showautoSetAxisAngle()
+{
+    Zidongzhoujiaocha *showautoSetAxisAngle=new Zidongzhoujiaocha();
+    showautoSetAxisAngle->show();
     this->close();
 }
