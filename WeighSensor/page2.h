@@ -28,6 +28,7 @@ public slots:
     void showVideo();//视频设置
     void showQRcode();//二维码管理
     void showPrint();//打印设置界面
+    void showNext();//下一页菜单
 };
 
 #endif // PAGE2_H

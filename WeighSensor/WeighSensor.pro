@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     jiance.cpp \
     shipinshezhi.cpp \
     erweimaguanli.cpp \
-    dayin.cpp
+    dayin.cpp \
+    page3.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -31,7 +32,8 @@ HEADERS  += index.h \
     jiance.h \
     shipinshezhi.h \
     erweimaguanli.h \
-    dayin.h
+    dayin.h \
+    page3.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -41,4 +43,5 @@ FORMS    += index.ui \
     jiance.ui \
     shipinshezhi.ui \
     erweimaguanli.ui \
-    dayin.ui
+    dayin.ui \
+    page3.ui

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Page3</class>
+ <widget class="QWidget" name="Page3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>781</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5,1">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QTimeEdit" name="timeEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(153, 211, 255);</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="margin">
+         <number>20</number>
+        </property>
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="video">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>接线示意图</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="unmanned">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>初始化</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="check">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>软件更新</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="permission">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>UpArrowCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>网络设置</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>帮助手册</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="adjustable">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>通讯设置</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QPushButton" name="preview">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>preview</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="returnIndex">
+       <property name="font">
+        <font>
+         <family>AR PL UMing TW MBE</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>fanhui</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="returnPage">
+       <property name="text">
+        <string>shangyiye</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <zorder>layoutWidget</zorder>
+  <zorder>widget</zorder>
+  <zorder>layoutWidget_3</zorder>
+  <zorder>layoutWidget_2</zorder>
+  <zorder>preview</zorder>
+  <zorder>preview</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
