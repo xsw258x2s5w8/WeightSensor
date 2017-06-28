@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     tiaochen.cpp \
     wurenzhishou.cpp \
     jiance.cpp \
-    shipinshezhi.cpp
+    shipinshezhi.cpp \
+    erweimaguanli.cpp \
+    dayin.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -27,7 +29,9 @@ HEADERS  += index.h \
     tiaochen.h \
     wurenzhishou.h \
     jiance.h \
-    shipinshezhi.h
+    shipinshezhi.h \
+    erweimaguanli.h \
+    dayin.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -35,4 +39,6 @@ FORMS    += index.ui \
     tiaochen.ui \
     wurenzhishou.ui \
     jiance.ui \
-    shipinshezhi.ui
+    shipinshezhi.ui \
+    erweimaguanli.ui \
+    dayin.ui

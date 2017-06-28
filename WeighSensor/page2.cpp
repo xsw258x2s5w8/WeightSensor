@@ -5,7 +5,9 @@
 #include "tiaochen.h"
 #include "wurenzhishou.h"
 #include "jiance.h"
-#include"shipinshezhi.h"
+#include "shipinshezhi.h"
+#include "erweimaguanli.h"
+#include "dayin.h"
 
 page2::page2(QWidget *parent) :
     QWidget(parent),
@@ -19,6 +21,8 @@ page2::page2(QWidget *parent) :
     connect(ui->unmanned,SIGNAL(clicked()),this,SLOT(showUnmanned()));
     connect(ui->check,SIGNAL(clicked()),this,SLOT(showCheck()));
     connect(ui->video,SIGNAL(clicked()),this,SLOT(showVideo()));
+    connect(ui->QRcode,SIGNAL(clicked()),this,SLOT(showQRcode()));
+    connect(ui->print,SIGNAL(clicked()),this,SLOT(showPrint()));
 }
 
 page2::~page2()
@@ -72,5 +76,19 @@ void page2::showVideo()
 {
     Shipinshezhi *showVideo=new Shipinshezhi();
     showVideo->show();
+    this->close();
+}
+
+void page2::showQRcode()
+{
+    Erweimaguanli *showQRcode=new Erweimaguanli();
+    showQRcode->show();
+    this->close();
+}
+
+void page2::showPrint()
+{
+    Dayin *showPrint=new Dayin();
+    showPrint->show();
     this->close();
 }

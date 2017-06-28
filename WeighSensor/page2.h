@@ -19,13 +19,15 @@ private:
     Ui::page2 *ui;
 
 public slots:
-    void returnIndex();//zhuye
-    void showPermission();//quanxianye
-    void returnPage();//zhuye
-    void showAdjustable();//tiaochen
-    void showUnmanned();//wurenzhishou
-    void showCheck();//jiance
-    void showVideo();//shipinshezhi
+    void returnIndex();//主页
+    void showPermission();//权限界面
+    void returnPage();//上一页
+    void showAdjustable();//调秤界面
+    void showUnmanned();//无人值守
+    void showCheck();//检测
+    void showVideo();//视频设置
+    void showQRcode();//二维码管理
+    void showPrint();//打印设置界面
 };
 
 #endif // PAGE2_H
