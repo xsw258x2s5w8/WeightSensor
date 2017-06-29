@@ -2,5 +2,12 @@
     <qresource prefix="/image">
         <file>images/radar.png</file>
         <file>images/warning.png</file>
+        <file>images/RS232.png</file>
+        <file>images/storage.svg</file>
+        <file>images/jia.svg</file>
+        <file>images/jian.svg</file>
+        <file>images/sun.svg</file>
+        <file>images/phone.svg</file>
+        <file>images/light.png</file>
     </qresource>
 </RCC>

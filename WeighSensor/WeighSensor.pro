@@ -56,7 +56,13 @@ SOURCES += main.cpp\
     shuliangyuxieyi.cpp \
     wangjimima.cpp \
     yibiaoxinxi.cpp \
-    jiance2.cpp
+    jiance2.cpp \
+    pcders232.cpp \
+    cunchuqijiance.cpp \
+    xianshipingjiance.cpp \
+    beiguangliangdu.cpp \
+    shouhou.cpp \
+    gongdianzhuangtai.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -101,7 +107,13 @@ HEADERS  += index.h \
     shuliangyuxieyi.h \
     wangjimima.h \
     yibiaoxinxi.h \
-    jiance2.h
+    jiance2.h \
+    pcders232.h \
+    cunchuqijiance.h \
+    xianshipingjiance.h \
+    beiguangliangdu.h \
+    shouhou.h \
+    gongdianzhuangtai.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -146,7 +158,13 @@ FORMS    += index.ui \
     shuliangyuxieyi.ui \
     wangjimima.ui \
     yibiaoxinxi.ui \
-    jiance2.ui
+    jiance2.ui \
+    pcders232.ui \
+    cunchuqijiance.ui \
+    xianshipingjiance.ui \
+    beiguangliangdu.ui \
+    shouhou.ui \
+    gongdianzhuangtai.ui
 
 TRANSLATIONS =WeighSensor.ts
 

@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,2,1">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
