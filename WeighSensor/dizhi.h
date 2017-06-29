@@ -24,6 +24,7 @@ public slots:
     void showSingleAddress();//单个设置界面
     void showAddressW();//进入按地址组秤页面
     void showautoNetwork();//进入自动组网界面
+    void showNumber();//进入数量与协议界面
 };
 
 #endif // DIZHI_H
