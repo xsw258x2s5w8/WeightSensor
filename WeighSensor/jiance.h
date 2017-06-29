@@ -21,6 +21,8 @@ private:
 public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan
+    void showMeterInformation();//进入仪表信息界面
+    void showNext();//进入检测下一页面
 };
 
 #endif // JIANCE_H
