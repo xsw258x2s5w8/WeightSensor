@@ -22,6 +22,7 @@ public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan
     void showPreview();//显示检测的前面一页
+    void showKaiCheck();//显示开壳检测页面
 };
 
 #endif // JIANCE2_H

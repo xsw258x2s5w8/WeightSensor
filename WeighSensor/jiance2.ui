@@ -96,7 +96,7 @@
         <number>20</number>
        </property>
        <item row="1" column="1">
-        <widget class="QPushButton" name="meterInformation">
+        <widget class="QPushButton" name="check">
          <property name="minimumSize">
           <size>
            <width>66</width>
