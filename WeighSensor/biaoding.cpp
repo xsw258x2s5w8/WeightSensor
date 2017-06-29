@@ -2,6 +2,7 @@
 #include "ui_biaoding.h"
 #include "index.h"
 #include "tiaochen.h"
+#include "biaoding_1.h"
 
 Biaoding::Biaoding(QWidget *parent) :
     QWidget(parent),
@@ -10,6 +11,7 @@ Biaoding::Biaoding(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
+    connect(ui->confirm,SIGNAL(clicked()),this,SLOT(showCalibration()));
 }
 
 Biaoding::~Biaoding()
@@ -28,5 +30,12 @@ void Biaoding::returnPage()
 {
     Tiaochen *returnPage=new Tiaochen();
     returnPage->show();
+    this->close();
+}
+
+void Biaoding::showCalibration()
+{
+    Biaoding_1 *showCalibration=new Biaoding_1();
+    showCalibration->show();
     this->close();
 }

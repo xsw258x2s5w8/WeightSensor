@@ -27,6 +27,7 @@ public slots:
     void showBalanceValue();//显示秤台参数界面
     void showtiaochen_2();//显示调秤下一页
     void showCalibration();//显示标定界面
+    void showTest();//显示安装测试界面
 };
 
 #endif // TIAOCHEN_H

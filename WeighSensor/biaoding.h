@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showCalibration();//点击确定按钮后的标定界面
 };
 
 #endif // BIAODING_H
