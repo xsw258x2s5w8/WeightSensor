@@ -3,6 +3,8 @@
 #include "index.h"
 #include "tiaochen.h"
 #include "dangeshedizhi.h"
+#include "andizhizucheng.h"
+#include "zidongzuwang.h"
 
 Dizhi::Dizhi(QWidget *parent) :
     QWidget(parent),
@@ -12,6 +14,9 @@ Dizhi::Dizhi(QWidget *parent) :
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->setSingleAddress,SIGNAL(clicked()),this,SLOT(showSingleAddress()));
+    connect(ui->addressWeigh,SIGNAL(clicked()),this,SLOT(showAddressW()));
+    connect(ui->setSingleAddress,SIGNAL(clicked()),this,SLOT(showSingleAddress()));
+    connect(ui->autoNetwork,SIGNAL(clicked()),this,SLOT(showautoNetwork()));
 }
 
 Dizhi::~Dizhi()
@@ -37,5 +42,19 @@ void Dizhi::showSingleAddress()
 {
     Dangeshedizhi *showSingleAddress=new Dangeshedizhi();
     showSingleAddress->show();
+    this->close();
+}
+
+void Dizhi::showAddressW()
+{
+    Andizhizucheng *showAddressW=new Andizhizucheng();
+    showAddressW->show();
+    this->close();
+}
+
+void Dizhi::showautoNetwork()
+{
+    Zidongzuwang *showautoNetwork=new Zidongzuwang();
+    showautoNetwork->show();
     this->close();
 }

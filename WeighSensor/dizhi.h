@@ -22,6 +22,8 @@ public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
     void showSingleAddress();//单个设置界面
+    void showAddressW();//进入按地址组秤页面
+    void showautoNetwork();//进入自动组网界面
 };
 
 #endif // DIZHI_H

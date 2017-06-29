@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
@@ -100,7 +103,7 @@
        <rect>
         <x>9</x>
         <y>9</y>
-        <width>91</width>
+        <width>105</width>
         <height>151</height>
        </rect>
       </property>
@@ -216,13 +219,13 @@
        </rect>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>540</x>
         <y>20</y>
         <width>41</width>
-        <height>41</height>
+        <height>62</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">

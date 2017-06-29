@@ -135,7 +135,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_16">
+        <widget class="QPushButton" name="addressWeigh">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -143,12 +143,12 @@
           </size>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>按地址组秤</string>
          </property>
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_17">
+        <widget class="QPushButton" name="autoNetwork">
          <property name="minimumSize">
           <size>
            <width>66</width>
@@ -156,7 +156,7 @@
           </size>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>自动组网</string>
          </property>
         </widget>
        </item>
