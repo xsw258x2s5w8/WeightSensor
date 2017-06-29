@@ -28,6 +28,8 @@ public slots:
     void showtiaochen_2();//显示调秤下一页
     void showCalibration();//显示标定界面
     void showTest();//显示安装测试界面
+    void showBackup();//进入参数备份界面
+    void showRestore();//进入参数还原部分
 };
 
 #endif // TIAOCHEN_H

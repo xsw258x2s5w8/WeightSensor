@@ -81,7 +81,7 @@
      </property>
      <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0" columnstretch="2,2,2,2,1" rowminimumheight="1,2,2">
       <item row="2" column="3">
-       <widget class="QPushButton" name="pushButton_22">
+       <widget class="QPushButton" name="restore">
         <property name="minimumSize">
          <size>
           <width>66</width>
@@ -89,7 +89,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>参数还原</string>
         </property>
        </widget>
       </item>
@@ -201,7 +201,7 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QPushButton" name="pushButton_21">
+       <widget class="QPushButton" name="backUp">
         <property name="minimumSize">
          <size>
           <width>66</width>
@@ -209,7 +209,7 @@
          </size>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>参数备份</string>
         </property>
        </widget>
       </item>

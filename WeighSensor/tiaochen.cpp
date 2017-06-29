@@ -9,6 +9,8 @@
 #include "tiaochen_2.h"
 #include "biaoding.h"
 #include "anzhuangceshi.h"
+#include "caishubeifen.h"
+#include "canshuhuanyuan.h"
 
 Tiaochen::Tiaochen(QWidget *parent) :
     QWidget(parent),
@@ -24,6 +26,8 @@ Tiaochen::Tiaochen(QWidget *parent) :
     connect(ui->next,SIGNAL(clicked()),this,SLOT(showtiaochen_2()));
     connect(ui->calibration,SIGNAL(clicked()),this,SLOT(showCalibration()));
     connect(ui->test,SIGNAL(clicked()),this,SLOT(showTest()));
+    connect(ui->backUp,SIGNAL(clicked()),this,SLOT(showBackup()));
+    connect(ui->restore,SIGNAL(clicked()),this,SLOT(showRestore()));
 }
 
 Tiaochen::~Tiaochen()
@@ -91,6 +95,20 @@ void Tiaochen::showTest()
 {
     Anzhuangceshi *showTest=new Anzhuangceshi();
     showTest->show();
+    this->close();
+}
+
+void Tiaochen::showBackup()
+{
+    Caishubeifen *showBackup=new Caishubeifen();
+    showBackup->show();
+    this->close();
+}
+
+void Tiaochen::showRestore()
+{
+    Canshuhuanyuan *showRestore=new Canshuhuanyuan();
+    showRestore->show();
     this->close();
 }
 

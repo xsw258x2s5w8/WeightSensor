@@ -82,10 +82,10 @@
      <widget class="QLabel" name="radar">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>90</x>
         <y>10</y>
-        <width>461</width>
-        <height>321</height>
+        <width>421</width>
+        <height>281</height>
        </rect>
       </property>
       <property name="text">
@@ -95,12 +95,12 @@
        <pixmap resource="myimages.qrc">:/image/images/radar.png</pixmap>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>9</x>
         <y>9</y>
-        <width>81</width>
+        <width>91</width>
         <height>151</height>
        </rect>
       </property>
@@ -179,8 +179,8 @@
      <widget class="QLineEdit" name="lineEdit_3">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>280</y>
+        <x>290</x>
+        <y>260</y>
         <width>61</width>
         <height>37</height>
        </rect>
@@ -189,8 +189,8 @@
      <widget class="QLineEdit" name="lineEdit_4">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>100</y>
+        <x>470</x>
+        <y>170</y>
         <width>61</width>
         <height>37</height>
        </rect>
@@ -199,8 +199,8 @@
      <widget class="QLineEdit" name="lineEdit_5">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>20</y>
+        <x>430</x>
+        <y>10</y>
         <width>61</width>
         <height>37</height>
        </rect>
@@ -209,22 +209,77 @@
      <widget class="QLineEdit" name="lineEdit_6">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>100</y>
+        <x>150</x>
+        <y>70</y>
         <width>61</width>
         <height>37</height>
        </rect>
       </property>
      </widget>
-     <zorder></zorder>
-     <zorder>next</zorder>
-     <zorder>radar</zorder>
-     <zorder></zorder>
-     <zorder>next</zorder>
-     <zorder>lineEdit_3</zorder>
-     <zorder>lineEdit_4</zorder>
-     <zorder>lineEdit_5</zorder>
-     <zorder>lineEdit_6</zorder>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>20</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(129, 129, 129);</string>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(129, 129, 129);</string>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(129, 129, 129);</string>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_6">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(129, 129, 129);</string>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
    <item>
