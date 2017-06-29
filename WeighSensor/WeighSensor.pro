@@ -44,7 +44,10 @@ SOURCES += main.cpp\
     anzhuangceshi.cpp \
     anzhuangceshi1.cpp \
     caishubeifen.cpp \
-    canshuhuanyuan.cpp
+    canshuhuanyuan.cpp \
+    chaizai.cpp \
+    tongxunbaohu.cpp \
+    jiandingshijian.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -77,7 +80,10 @@ HEADERS  += index.h \
     anzhuangceshi.h \
     anzhuangceshi1.h \
     caishubeifen.h \
-    canshuhuanyuan.h
+    canshuhuanyuan.h \
+    chaizai.h \
+    tongxunbaohu.h \
+    jiandingshijian.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -110,7 +116,10 @@ FORMS    += index.ui \
     anzhuangceshi.ui \
     anzhuangceshi1.ui \
     caishubeifen.ui \
-    canshuhuanyuan.ui
+    canshuhuanyuan.ui \
+    chaizai.ui \
+    tongxunbaohu.ui \
+    jiandingshijian.ui
 
 TRANSLATIONS =WeighSensor.ts
 

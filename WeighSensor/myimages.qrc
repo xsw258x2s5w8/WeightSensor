@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/image">
         <file>images/radar.png</file>
+        <file>images/warning.png</file>
     </qresource>
 </RCC>

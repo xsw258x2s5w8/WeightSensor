@@ -22,6 +22,9 @@ public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan
     void showtiaochen();//显示调秤上一页
+    void showOverload();//进入超载查询页面
+    void showCommunication();//进入通讯保护界面
+    void showCheck();//进入检定界面
 };
 
 #endif // TIAOCHEN_2_H

@@ -79,9 +79,9 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout" columnstretch="1,2,2,2,2,0">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="1,2,2,2,2">
       <item row="1" column="2">
-       <widget class="QPushButton" name="adjustAngle">
+       <widget class="QPushButton" name="communication">
         <property name="minimumSize">
          <size>
           <width>66</width>
@@ -89,7 +89,7 @@
          </size>
         </property>
         <property name="text">
-         <string>sdfs</string>
+         <string>通讯保护</string>
         </property>
        </widget>
       </item>
@@ -107,7 +107,7 @@
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QPushButton" name="balanceState">
+       <widget class="QPushButton" name="check">
         <property name="minimumSize">
          <size>
           <width>66</width>
@@ -115,12 +115,12 @@
          </size>
         </property>
         <property name="text">
-         <string>ewrwe</string>
+         <string>检定时间</string>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="address">
+       <widget class="QPushButton" name="overload">
         <property name="minimumSize">
          <size>
           <width>66</width>
@@ -128,7 +128,7 @@
          </size>
         </property>
         <property name="text">
-         <string>dfsf</string>
+         <string>超载查询</string>
         </property>
        </widget>
       </item>
