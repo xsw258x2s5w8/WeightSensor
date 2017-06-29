@@ -17,6 +17,11 @@ public:
     
 private:
     Ui::Anzhuangceshi *ui;
+
+public slots:
+    void returnIndex();//主页
+    void returnPage();//返回上一页
+    void showInformation();//进入详情页面
 };
 
 #endif // ANZHUANGCESHI_H
