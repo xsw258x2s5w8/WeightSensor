@@ -111,7 +111,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>shipinshezhi</string>
+          <string>视频监控设置</string>
          </property>
         </widget>
        </item>
@@ -120,12 +120,12 @@
          <item>
           <widget class="QLabel" name="label_4">
            <property name="text">
-            <string>shipinqingxidu</string>
+            <string>视频清晰度</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox_2"/>
+          <widget class="QComboBox" name="comboBox"/>
          </item>
         </layout>
        </item>
@@ -134,7 +134,7 @@
          <item>
           <widget class="QLabel" name="label_14">
            <property name="text">
-            <string>TextLabel</string>
+            <string>开启拍照</string>
            </property>
           </widget>
          </item>
@@ -152,17 +152,21 @@
          <item>
           <widget class="QLabel" name="label_15">
            <property name="text">
-            <string>TextLabel</string>
+            <string>照片压缩比</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="lineEdit_7">
+           <property name="text">
+            <string>80</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_16">
            <property name="text">
-            <string>TextLabel</string>
+            <string>%</string>
            </property>
           </widget>
          </item>

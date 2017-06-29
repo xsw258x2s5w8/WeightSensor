@@ -8,6 +8,12 @@ Shipinshezhi::Shipinshezhi(QWidget *parent) :
     ui(new Ui::Shipinshezhi)
 {
     ui->setupUi(this);
+
+    //combox 属性条目
+    QStringList strings;
+    strings<<tr("Common")<<tr("Fluent")<<tr("HD");
+    ui->comboBox->addItems(strings);
+
     connect(ui->returnIndex_2,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
