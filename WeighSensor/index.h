@@ -21,6 +21,7 @@ private:
 public slots:
     void showMenuWidget();// 进入菜单界面
     void showQRcode();//进入二维码界面
+    void showPrint();//进入打印界面。
 };
 
 #endif // INDEX_H

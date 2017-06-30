@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showPrintValue();//打印参数页面
 };
 
 #endif // DAYIN_H

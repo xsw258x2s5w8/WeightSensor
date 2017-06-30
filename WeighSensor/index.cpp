@@ -2,6 +2,7 @@
 #include "ui_index.h"
 #include "page2.h"
 #include "erweimaguanli.h"
+#include "lishijilu.h"
 
 Index::Index(QWidget *parent) :
     QMainWindow(parent),
@@ -10,6 +11,7 @@ Index::Index(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->menu,SIGNAL(clicked()),this,SLOT(showMenuWidget()));
     connect(ui->QRcode,SIGNAL(clicked()),this,SLOT(showQRcode()));
+    connect(ui->print,SIGNAL(clicked()),this,SLOT(showPrint()));
 }
 
 Index::~Index()
@@ -28,5 +30,12 @@ void Index::showQRcode()
 {
     Erweimaguanli *showQRcode=new Erweimaguanli();
     showQRcode->show();
+    this->close();
+}
+
+void Index::showPrint()
+{
+    Lishijilu *showPrint=new Lishijilu();
+    showPrint->show();
     this->close();
 }
