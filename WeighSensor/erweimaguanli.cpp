@@ -2,6 +2,8 @@
 #include "ui_erweimaguanli.h"
 #include "page2.h"
 #include "index.h"
+#include "erweimashengcheng.h"
+#include "erweimachaxun.h"
 
 Erweimaguanli::Erweimaguanli(QWidget *parent) :
     QWidget(parent),
@@ -10,6 +12,8 @@ Erweimaguanli::Erweimaguanli(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
+    connect(ui->generateQRcode,SIGNAL(clicked()),this,SLOT(showGenerateQR()));
+    connect(ui->findQRcode,SIGNAL(clicked()),this,SLOT(showFindQR()));
 }
 
 Erweimaguanli::~Erweimaguanli()
@@ -28,5 +32,19 @@ void Erweimaguanli::returnPage()
 {
     page2 *returnPage=new page2();
     returnPage->show();
+    this->close();
+}
+
+void Erweimaguanli::showGenerateQR()
+{
+    Erweimashengcheng *showGenerateQR=new Erweimashengcheng();
+    showGenerateQR->show();
+    this->close();
+}
+
+void Erweimaguanli::showFindQR()
+{
+    Erweimachaxun *showFindQR=new Erweimachaxun();
+    showFindQR->show();
     this->close();
 }

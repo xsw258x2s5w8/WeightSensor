@@ -101,7 +101,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="generateQRcode">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -111,10 +111,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>shengcheng</string>
+       <string>生成二维码</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="findQRcode">
       <property name="geometry">
        <rect>
         <x>116</x>
@@ -124,7 +124,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>chaxun</string>
+       <string>查询二维码</string>
       </property>
      </widget>
     </widget>

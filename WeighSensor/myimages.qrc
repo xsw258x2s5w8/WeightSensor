@@ -9,5 +9,14 @@
         <file>images/sun.svg</file>
         <file>images/phone.svg</file>
         <file>images/light.png</file>
+        <file>images/code1.svg</file>
+        <file>images/code2.svg</file>
+        <file>images/shangyiye.svg</file>
+        <file>images/index.svg</file>
+        <file>images/4g.png</file>
+        <file>images/locate.svg</file>
+        <file>images/wireless.svg</file>
+        <file>images/bl.svg</file>
+        <file>images/find.svg</file>
     </qresource>
 </RCC>

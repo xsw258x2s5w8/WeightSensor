@@ -18,11 +18,15 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,5,1">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <layout class="QHBoxLayout" name="horizontalLayout_21">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButton_15">
        <property name="text">
-        <string>图标1</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/4g.png</normaloff>:/image/images/4g.png</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -30,9 +34,13 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButton_16">
        <property name="text">
-        <string>图标2</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/wireless.svg</normaloff>:/image/images/wireless.svg</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -40,9 +48,13 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButton_17">
        <property name="text">
-        <string>图标3</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/bl.svg</normaloff>:/image/images/bl.svg</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -50,9 +62,13 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushButton_18">
        <property name="text">
-        <string>图标4</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/locate.svg</normaloff>:/image/images/locate.svg</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -60,7 +76,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_4">
+      <spacer name="horizontalSpacer_7">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -73,7 +89,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QTimeEdit" name="timeEdit_2"/>
+      <widget class="QTimeEdit" name="timeEdit_5"/>
      </item>
     </layout>
    </item>
@@ -442,8 +458,21 @@
          <family>AR PL UMing TW MBE</family>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/images/index.svg);</string>
+       </property>
        <property name="text">
-        <string>fanhui</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/index.svg</normaloff>:/image/images/index.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -486,7 +515,17 @@
      <item>
       <widget class="QPushButton" name="returnPage">
        <property name="text">
-        <string>shangyiye</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/shangyiye.svg</normaloff>:/image/images/shangyiye.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -497,6 +536,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="myimages.qrc"/>
+ </resources>
  <connections/>
 </ui>

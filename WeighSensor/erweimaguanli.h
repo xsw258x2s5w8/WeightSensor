@@ -17,9 +17,12 @@ public:
     
 private:
     Ui::Erweimaguanli *ui;
+
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showGenerateQR();//进入生成二维码界面
+    void showFindQR();//进入查询二维码界面
 };
 
 #endif // ERWEIMAGUANLI_H

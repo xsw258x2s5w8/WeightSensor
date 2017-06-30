@@ -268,7 +268,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="QRcode">
         <property name="text">
          <string>二维码</string>
         </property>

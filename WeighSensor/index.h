@@ -19,7 +19,8 @@ private:
     Ui::Index *ui;
 
 public slots:
-    void showMenuWidget();
+    void showMenuWidget();// 进入菜单界面
+    void showQRcode();//进入二维码界面
 };
 
 #endif // INDEX_H
