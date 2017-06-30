@@ -22,6 +22,7 @@ public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
     void showNext();//显示next页面
+    void showPreview();//显示preview页面
 };
 
 #endif // BANGZHUSHOUCE_H

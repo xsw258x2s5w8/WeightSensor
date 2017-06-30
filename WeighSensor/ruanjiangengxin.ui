@@ -178,7 +178,7 @@ p, li { white-space: pre-wrap; }
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_5">
+            <widget class="QPushButton" name="update">
              <property name="text">
               <string>更新</string>
              </property>

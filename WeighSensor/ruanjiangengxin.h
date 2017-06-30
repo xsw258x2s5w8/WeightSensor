@@ -21,6 +21,7 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+    void showUpdate();//进入是否确定更新页面
 };
 
 #endif // RUANJIANGENGXIN_H

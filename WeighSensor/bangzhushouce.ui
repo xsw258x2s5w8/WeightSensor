@@ -182,7 +182,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="preview">
        <property name="text">
         <string>上一页</string>
        </property>

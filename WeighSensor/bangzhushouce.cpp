@@ -12,6 +12,7 @@ Bangzhushouce::Bangzhushouce(QWidget *parent) :
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->next,SIGNAL(clicked()),this,SLOT(showNext()));
+    connect(ui->preview,SIGNAL(clicked()),this,SLOT(showPreview()));
 }
 
 Bangzhushouce::~Bangzhushouce()
@@ -34,6 +35,13 @@ void Bangzhushouce::returnPage()
 }
 
 void Bangzhushouce::showNext()
+{
+    Bangzhushouce1 *showNext=new Bangzhushouce1();
+    showNext->show();
+    this->close();
+}
+
+void Bangzhushouce::showPreview()
 {
     Bangzhushouce1 *showNext=new Bangzhushouce1();
     showNext->show();
