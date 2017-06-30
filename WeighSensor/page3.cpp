@@ -3,6 +3,8 @@
 #include "index.h"
 #include "page2.h"
 #include "wangluoshezhi.h"
+#include "tongxunshezhi.h"
+#include "ruanjiangengxin.h"
 
 Page3::Page3(QWidget *parent) :
     QWidget(parent),
@@ -13,6 +15,8 @@ Page3::Page3(QWidget *parent) :
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->preview,SIGNAL(clicked()),this,SLOT(showPreview()));
     connect(ui->setNetwork,SIGNAL(clicked()),this,SLOT(showSetNetwork()));
+    connect(ui->communication,SIGNAL(clicked()),this,SLOT(showCommunication()));
+    connect(ui->update,SIGNAL(clicked()),this,SLOT(showUpdateSoftware()));
 }
 
 Page3::~Page3()
@@ -45,5 +49,19 @@ void Page3::showSetNetwork()
 {
     Wangluoshezhi *showSetNetwork=new Wangluoshezhi();
     showSetNetwork->show();
+    this->close();
+}
+
+void Page3::showCommunication()
+{
+    Tongxunshezhi *showCommunication=new Tongxunshezhi();
+    showCommunication->show();
+    this->close();
+}
+
+void Page3::showUpdateSoftware()
+{
+    Ruanjiangengxin *showUpdateSoftware=new Ruanjiangengxin();
+    showUpdateSoftware->show();
     this->close();
 }

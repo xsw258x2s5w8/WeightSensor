@@ -23,6 +23,8 @@ public slots:
     void returnPage();//返回上一页
     void showPreview();//返回菜单上一页
     void showSetNetwork();//进入网络设置界面
+    void showCommunication();//进入通讯设置界面
+    void showUpdateSoftware();//进入软件更新界面
 };
 
 #endif // PAGE3_H

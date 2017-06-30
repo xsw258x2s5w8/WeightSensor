@@ -91,153 +91,147 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>-10</y>
-        <width>595</width>
-        <height>245</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <property name="sizeConstraint">
-        <enum>QLayout::SetDefaultConstraint</enum>
-       </property>
-       <property name="margin">
-        <number>20</number>
-       </property>
-       <property name="spacing">
-        <number>20</number>
-       </property>
-       <item row="1" column="3">
-        <widget class="QPushButton" name="print">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>打印设置 (未做)</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QPushButton" name="unmanned">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>无人值守</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QPushButton" name="check">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>检测</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_13">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="adjustable">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>调秤</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="video">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>视频设置</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="QRcode">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>二维码管理</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="permission">
-         <property name="minimumSize">
-          <size>
-           <width>66</width>
-           <height>66</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>权限选择</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4" rowspan="2">
-        <widget class="QPushButton" name="next">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>next</string>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="margin">
+         <number>20</number>
+        </property>
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="print">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>打印设置 (未做)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="unmanned">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>无人值守</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="check">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>检测</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>PushButton</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="adjustable">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>调秤</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="video">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>视频设置</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="QRcode">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>二维码管理</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="permission">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>权限选择</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4" rowspan="2">
+         <widget class="QPushButton" name="next">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>next</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
