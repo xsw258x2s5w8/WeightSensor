@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Page3</class>
- <widget class="QWidget" name="Page3">
+ <class>Chushihua</class>
+ <widget class="QWidget" name="Chushihua">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
-    <height>482</height>
+    <width>739</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,39 +16,67 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5,1">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QLabel" name="label_10">
+      <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/4g.png</normaloff>:/image/images/4g.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_11">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/wireless.svg</normaloff>:/image/images/wireless.svg</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_12">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/bl.svg</normaloff>:/image/images/bl.svg</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_13">
+      <widget class="QPushButton" name="pushButton_4">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/locate.svg</normaloff>:/image/images/locate.svg</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_2">
+      <spacer name="horizontalSpacer_4">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -61,7 +89,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QTimeEdit" name="timeEdit"/>
+      <widget class="QTimeEdit" name="timeEdit_2"/>
      </item>
     </layout>
    </item>
@@ -79,17 +107,27 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>初始化</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
         <property name="margin">
          <number>20</number>
         </property>
         <property name="spacing">
          <number>20</number>
         </property>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="exhibition">
+        <item row="0" column="2">
+         <widget class="QPushButton" name="unmanned">
           <property name="minimumSize">
            <size>
             <width>66</width>
@@ -97,12 +135,12 @@
            </size>
           </property>
           <property name="text">
-           <string>接线示意图</string>
+           <string>串口配置初始化</string>
           </property>
          </widget>
         </item>
         <item row="0" column="3">
-         <widget class="QPushButton" name="initialize">
+         <widget class="QPushButton" name="check">
           <property name="minimumSize">
            <size>
             <width>66</width>
@@ -110,12 +148,12 @@
            </size>
           </property>
           <property name="text">
-           <string>初始化</string>
+           <string>打印配置初始化</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="4">
-         <widget class="QPushButton" name="update">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="permission">
           <property name="minimumSize">
            <size>
             <width>66</width>
@@ -123,28 +161,12 @@
            </size>
           </property>
           <property name="text">
-           <string>软件更新</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="setNetwork">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="cursor">
-           <cursorShape>UpArrowCursor</cursorShape>
-          </property>
-          <property name="text">
-           <string>网络设置</string>
+           <string>传感器配置初始化</string>
           </property>
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QPushButton" name="help">
+         <widget class="QPushButton" name="QRcode">
           <property name="minimumSize">
            <size>
             <width>66</width>
@@ -152,12 +174,12 @@
            </size>
           </property>
           <property name="text">
-           <string>帮助手册</string>
+           <string>网络配置初始化</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="communication">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="adjustable">
           <property name="minimumSize">
            <size>
             <width>66</width>
@@ -165,32 +187,46 @@
            </size>
           </property>
           <property name="text">
-           <string>通讯设置</string>
+           <string>传感器角差初始化</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="0" rowspan="2">
-         <widget class="QPushButton" name="preview">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="print">
           <property name="minimumSize">
            <size>
-            <width>50</width>
-            <height>50</height>
+            <width>66</width>
+            <height>66</height>
            </size>
           </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
+          <property name="text">
+           <string>全部初始化</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="video">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
           </property>
           <property name="text">
-           <string>preview</string>
+           <string>标定参数初始化</string>
           </property>
-          <property name="flat">
-           <bool>true</bool>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="minimumSize">
+           <size>
+            <width>66</width>
+            <height>66</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>称重记录初始化</string>
           </property>
          </widget>
         </item>
@@ -200,7 +236,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QPushButton" name="returnIndex">
        <property name="font">
@@ -208,8 +244,21 @@
          <family>AR PL UMing TW MBE</family>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/images/index.svg);</string>
+       </property>
        <property name="text">
-        <string>fanhui</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/index.svg</normaloff>:/image/images/index.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -217,7 +266,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="horizontalSpacer_2">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -232,7 +281,17 @@
      <item>
       <widget class="QPushButton" name="returnPage">
        <property name="text">
-        <string>shangyiye</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/shangyiye.svg</normaloff>:/image/images/shangyiye.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -243,6 +302,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="myimages.qrc"/>
+ </resources>
  <connections/>
 </ui>

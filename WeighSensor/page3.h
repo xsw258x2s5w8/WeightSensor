@@ -25,6 +25,9 @@ public slots:
     void showSetNetwork();//进入网络设置界面
     void showCommunication();//进入通讯设置界面
     void showUpdateSoftware();//进入软件更新界面
+    void showInitlization();//进入初始化界面
+    void showExhibition();//进入接线示意图
+    void showHelp();//进入帮助手册
 };
 
 #endif // PAGE3_H

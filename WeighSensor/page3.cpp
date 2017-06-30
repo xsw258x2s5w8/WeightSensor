@@ -5,6 +5,9 @@
 #include "wangluoshezhi.h"
 #include "tongxunshezhi.h"
 #include "ruanjiangengxin.h"
+#include "chushihua.h"
+#include "jiexianshiyitu.h"
+#include "bangzhushouce.h"
 
 Page3::Page3(QWidget *parent) :
     QWidget(parent),
@@ -17,6 +20,10 @@ Page3::Page3(QWidget *parent) :
     connect(ui->setNetwork,SIGNAL(clicked()),this,SLOT(showSetNetwork()));
     connect(ui->communication,SIGNAL(clicked()),this,SLOT(showCommunication()));
     connect(ui->update,SIGNAL(clicked()),this,SLOT(showUpdateSoftware()));
+    connect(ui->initialize,SIGNAL(clicked()),this,SLOT(showInitlization()));
+    connect(ui->exhibition,SIGNAL(clicked()),this,SLOT(showExhibition()));
+    connect(ui->help,SIGNAL(clicked()),this,SLOT(showHelp()));
+
 }
 
 Page3::~Page3()
@@ -65,3 +72,25 @@ void Page3::showUpdateSoftware()
     showUpdateSoftware->show();
     this->close();
 }
+
+void Page3::showInitlization()
+{
+    Chushihua *showInitlization=new Chushihua();
+    showInitlization->show();
+    this->close();
+}
+
+void Page3::showExhibition()
+{
+   Jiexianshiyitu *showExhibition=new Jiexianshiyitu();
+   showExhibition->show();
+   this->close();
+}
+
+void Page3::showHelp()
+{
+   Bangzhushouce *showHelp=new Bangzhushouce();
+   showHelp->show();
+   this->close();
+}
+
