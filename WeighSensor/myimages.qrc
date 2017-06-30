@@ -18,5 +18,11 @@
         <file>images/wireless.svg</file>
         <file>images/bl.svg</file>
         <file>images/find.svg</file>
+        <file>images/bluetooth.svg</file>
+        <file>images/menu.png</file>
+        <file>images/refresh.svg</file>
+        <file>images/xiangshang.svg</file>
+        <file>images/xiangxia.svg</file>
+        <file>images/gantan.svg</file>
     </qresource>
 </RCC>

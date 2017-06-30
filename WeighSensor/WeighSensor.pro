@@ -67,7 +67,9 @@ SOURCES += main.cpp\
     erweimashengcheng.cpp \
     erweimachaxun.cpp \
     wangluoshezhi.cpp \
-    yitaiwangshezhi.cpp
+    yitaiwangshezhi.cpp \
+    wifi.cpp \
+    lanya.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -123,7 +125,9 @@ HEADERS  += index.h \
     erweimashengcheng.h \
     erweimachaxun.h \
     wangluoshezhi.h \
-    yitaiwangshezhi.h
+    yitaiwangshezhi.h \
+    wifi.h \
+    lanya.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -179,7 +183,9 @@ FORMS    += index.ui \
     erweimashengcheng.ui \
     erweimachaxun.ui \
     wangluoshezhi.ui \
-    yitaiwangshezhi.ui
+    yitaiwangshezhi.ui \
+    wifi.ui \
+    lanya.ui
 
 TRANSLATIONS =WeighSensor.ts
 
