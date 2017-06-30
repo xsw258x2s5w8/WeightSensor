@@ -22,6 +22,7 @@ public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
     void showPreview();//返回菜单上一页
+    void showSetNetwork();//进入网络设置界面
 };
 
 #endif // PAGE3_H
