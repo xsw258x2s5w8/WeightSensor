@@ -237,14 +237,14 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="yiciguobang">
         <property name="text">
-         <string>一次过磅1</string>
+         <string>一次过磅</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="erciguobang">
         <property name="text">
          <string>二次过磅</string>
         </property>

@@ -3,6 +3,8 @@
 #include "page2.h"
 #include "erweimaguanli.h"
 #include "lishijilu.h"
+#include "yiciguobang.h"
+#include "erciguobang.h"
 
 Index::Index(QWidget *parent) :
     QMainWindow(parent),
@@ -12,6 +14,8 @@ Index::Index(QWidget *parent) :
     connect(ui->menu,SIGNAL(clicked()),this,SLOT(showMenuWidget()));
     connect(ui->QRcode,SIGNAL(clicked()),this,SLOT(showQRcode()));
     connect(ui->print,SIGNAL(clicked()),this,SLOT(showPrint()));
+    connect(ui->yiciguobang,SIGNAL(clicked()),this,SLOT(showYiguobang()));
+    connect(ui->erciguobang,SIGNAL(clicked()),this,SLOT(showErciguobang()));
 }
 
 Index::~Index()
@@ -37,5 +41,19 @@ void Index::showPrint()
 {
     Lishijilu *showPrint=new Lishijilu();
     showPrint->show();
+    this->close();
+}
+
+void Index::showYiguobang()
+{
+    Yiciguobang *showYiguobang=new Yiciguobang();
+    showYiguobang->show();
+    this->close();
+}
+
+void Index::showErciguobang()
+{
+    Erciguobang *showErciguobang=new Erciguobang();
+    showErciguobang->show();
     this->close();
 }
