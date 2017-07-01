@@ -40,10 +40,20 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 127);</string>
+        <string notr="true">border-image: url(:/image/images/index.svg);</string>
        </property>
        <property name="text">
-        <string>fanhui</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/index.svg</normaloff>:/image/images/index.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -78,11 +88,18 @@
      </item>
      <item>
       <widget class="QPushButton" name="returnPage">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 127);</string>
-       </property>
        <property name="text">
-        <string>shangyiye</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/shangyiye.svg</normaloff>:/image/images/shangyiye.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -93,6 +110,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="myimages.qrc"/>
+ </resources>
  <connections/>
 </ui>

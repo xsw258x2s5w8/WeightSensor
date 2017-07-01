@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>697</width>
-    <height>479</height>
+    <width>682</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,11 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>图标1</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/4g.png</normaloff>:/image/images/4g.png</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -32,7 +36,11 @@
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>图标2</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/wireless.svg</normaloff>:/image/images/wireless.svg</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -42,7 +50,11 @@
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>图标3</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/bl.svg</normaloff>:/image/images/bl.svg</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -52,7 +64,11 @@
      <item>
       <widget class="QPushButton" name="pushButton_4">
        <property name="text">
-        <string>图标4</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/locate.svg</normaloff>:/image/images/locate.svg</iconset>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -440,8 +456,21 @@
          <family>AR PL UMing TW MBE</family>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/images/index.svg);</string>
+       </property>
        <property name="text">
-        <string>fanhui</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/index.svg</normaloff>:/image/images/index.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -484,7 +513,17 @@
      <item>
       <widget class="QPushButton" name="returnPage">
        <property name="text">
-        <string>shangyiye</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="myimages.qrc">
+         <normaloff>:/image/images/shangyiye.svg</normaloff>:/image/images/shangyiye.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -494,37 +533,9 @@
     </layout>
    </item>
   </layout>
-  <zorder>widget</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>label_2</zorder>
-  <zorder>comboBox</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>layoutWidget_4</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>layoutWidget_6</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>comboBox_5</zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>lineEdit</zorder>
-  <zorder>label_12</zorder>
-  <zorder>layoutWidget_11</zorder>
-  <zorder>layoutWidget_12</zorder>
-  <zorder>label_15</zorder>
-  <zorder>label_16</zorder>
-  <zorder>lineEdit_4</zorder>
-  <zorder>lineEdit_5</zorder>
-  <zorder>layoutWidget_13</zorder>
-  <zorder>layoutWidget_14</zorder>
-  <zorder>label_19</zorder>
-  <zorder>label_20</zorder>
-  <zorder>horizontalSpacer_5</zorder>
-  <zorder>horizontalSpacer_6</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="myimages.qrc"/>
+ </resources>
  <connections/>
 </ui>
