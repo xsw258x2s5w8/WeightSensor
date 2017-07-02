@@ -1,4 +1,5 @@
 #include "index.h"
+#include "shipin.h"
 #include <QApplication>
 #include <QTranslator>
 
@@ -10,6 +11,8 @@ int main(int argc, char *argv[])
     a.installTranslator(&translator);
 
     Index w;
+    Shipin b;
+    b.show();
     w.show();
     
     return a.exec();

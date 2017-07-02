@@ -332,16 +332,23 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>切换上次</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton_6">
        <property name="text">
-        <string>车辆</string>
+        <string>确认</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_5">
        <property name="text">
-        <string>确认</string>
+        <string>扫描二维码</string>
        </property>
       </widget>
      </item>
