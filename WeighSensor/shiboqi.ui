@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Lishijilu</class>
- <widget class="QWidget" name="Lishijilu">
+ <class>Shiboqi</class>
+ <widget class="QWidget" name="Shiboqi">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
+    <width>678</width>
     <height>482</height>
    </rect>
   </property>
@@ -16,11 +16,11 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5,1">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="text">
         <string/>
        </property>
@@ -34,7 +34,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="text">
         <string/>
        </property>
@@ -48,7 +48,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButton_4">
        <property name="text">
         <string/>
        </property>
@@ -62,7 +62,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushButton_5">
        <property name="text">
         <string/>
        </property>
@@ -76,7 +76,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_4">
+      <spacer name="horizontalSpacer_7">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -89,7 +89,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QTimeEdit" name="timeEdit_2"/>
+      <widget class="QTimeEdit" name="timeEdit_3"/>
      </item>
     </layout>
    </item>
@@ -107,121 +107,84 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,4,2">
+     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="4,1">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>称重记录管理</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout"/>
-        </item>
-       </layout>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+border-image: url(:/image/images/shiboqi.png);</string>
+        </property>
+       </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <property name="spacing">
-         <number>40</number>
-        </property>
-        <property name="margin">
-         <number>40</number>
-        </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QPushButton" name="allRecord">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>完整记录查询</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>信号</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+         </layout>
         </item>
         <item>
-         <widget class="QPushButton" name="incompleteQuery">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>不完整记录查询</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>零点</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_2"/>
+          </item>
+         </layout>
         </item>
         <item>
-         <widget class="QPushButton" name="printTable">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>报表打印</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>幅度</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_3"/>
+          </item>
+         </layout>
         </item>
         <item>
-         <widget class="QPushButton" name="clear">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>清除</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>补打：打印最新的一条称重记录；</string>
-          </property>
-          <property name="scaledContents">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>走纸：使当前所选打印机向前送一行纸</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>累打：累计从序号为1到最新称重记录的重量数据，并进行收尾打印。之后序号又从1开始。</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,2">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>速度 秒/格</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_4"/>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -259,7 +222,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3">
+      <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -272,28 +235,35 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="pushButton_8">
        <property name="text">
-        <string>补打</string>
+        <string>&lt;-</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="pushButton_7">
        <property name="text">
-        <string>走纸</string>
+        <string>-&gt;</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="pushButton_6">
        <property name="text">
-        <string>累打</string>
+        <string>^</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_2">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>\/</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>

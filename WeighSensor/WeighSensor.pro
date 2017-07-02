@@ -81,7 +81,14 @@ SOURCES += main.cpp\
     lishijilu.cpp \
     yiciguobang.cpp \
     erciguobang.cpp \
-    shipin.cpp
+    shipin.cpp \
+    wanzheng.cpp \
+    wanzheng_chaxun.cpp \
+    buwanzheng.cpp \
+    buwanzheng_chaxun.cpp \
+    baobiaodayin.cpp \
+    qingchujillu.cpp \
+    shiboqi.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -151,7 +158,14 @@ HEADERS  += index.h \
     lishijilu.h \
     yiciguobang.h \
     erciguobang.h \
-    shipin.h
+    shipin.h \
+    wanzheng.h \
+    wanzheng_chaxun.h \
+    buwanzheng.h \
+    buwanzheng_chaxun.h \
+    baobiaodayin.h \
+    qingchujillu.h \
+    shiboqi.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -221,7 +235,14 @@ FORMS    += index.ui \
     lishijilu.ui \
     yiciguobang.ui \
     erciguobang.ui \
-    shipin.ui
+    shipin.ui \
+    wanzheng.ui \
+    wanzheng_chaxun.ui \
+    buwanzheng.ui \
+    buwanzheng_chaxun.ui \
+    baobiaodayin.ui \
+    qingchujillu.ui \
+    shiboqi.ui
 
 TRANSLATIONS =WeighSensor.ts
 

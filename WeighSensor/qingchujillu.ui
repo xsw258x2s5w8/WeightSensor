@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Lishijilu</class>
- <widget class="QWidget" name="Lishijilu">
+ <class>Qingchujillu</class>
+ <widget class="QWidget" name="Qingchujillu">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>482</height>
+    <width>687</width>
+    <height>488</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,5,1">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
@@ -113,7 +113,7 @@
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>称重记录管理</string>
+           <string>清除记录</string>
           </property>
          </widget>
         </item>
@@ -152,7 +152,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>完整记录查询</string>
+           <string>完整称重记录</string>
           </property>
          </widget>
         </item>
@@ -165,7 +165,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>不完整记录查询</string>
+           <string>不完整称重记录</string>
           </property>
          </widget>
         </item>
@@ -178,7 +178,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>报表打印</string>
+           <string>车号记录皮重</string>
           </property>
          </widget>
         </item>
@@ -191,7 +191,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>清除</string>
+           <string>最新称重记录</string>
           </property>
          </widget>
         </item>
@@ -202,7 +202,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>补打：打印最新的一条称重记录；</string>
+           <string>注：1、清除记录之后将不能再恢复！</string>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -212,14 +212,27 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>走纸：使当前所选打印机向前送一行纸</string>
+           <string>2、不完整称重记录指的是同一车号在两次过磅中，只过了一次磅。</string>
           </property>
          </widget>
         </item>
         <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>累打：累计从序号为1到最新称重记录的重量数据，并进行收尾打印。之后序号又从1开始。</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -270,27 +283,6 @@
         </size>
        </property>
       </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_9">
-       <property name="text">
-        <string>补打</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_10">
-       <property name="text">
-        <string>走纸</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_11">
-       <property name="text">
-        <string>累打</string>
-       </property>
-      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer_2">
