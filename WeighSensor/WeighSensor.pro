@@ -88,7 +88,10 @@ SOURCES += main.cpp\
     buwanzheng_chaxun.cpp \
     baobiaodayin.cpp \
     qingchujillu.cpp \
-    shiboqi.cpp
+    shiboqi.cpp \
+    huohao.cpp \
+    liuchengshezhi.cpp \
+    shouyecanshu.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -165,7 +168,10 @@ HEADERS  += index.h \
     buwanzheng_chaxun.h \
     baobiaodayin.h \
     qingchujillu.h \
-    shiboqi.h
+    shiboqi.h \
+    huohao.h \
+    liuchengshezhi.h \
+    shouyecanshu.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -242,7 +248,10 @@ FORMS    += index.ui \
     buwanzheng_chaxun.ui \
     baobiaodayin.ui \
     qingchujillu.ui \
-    shiboqi.ui
+    shiboqi.ui \
+    huohao.ui \
+    liuchengshezhi.ui \
+    shouyecanshu.ui
 
 TRANSLATIONS =WeighSensor.ts
 

@@ -29,6 +29,7 @@ public slots:
     void showQRcode();//二维码管理
     void showPrint();//打印设置界面
     void showNext();//下一页菜单
+    void showEditIndex();//进入编辑主页面
 };
 
 #endif // PAGE2_H

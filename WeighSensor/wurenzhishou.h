@@ -21,6 +21,8 @@ private:
 public slots:
   void returnIndex();//zhuye
   void returnPage();//fanhuicaidan
+  void showSetVideo();//进入视频设置界面
+  void showVideoProgress();//进入视频流程界面
 };
 
 #endif // WURENZHISHOU_H

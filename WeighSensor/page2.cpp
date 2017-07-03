@@ -9,6 +9,7 @@
 #include "erweimaguanli.h"
 #include "dayin.h"
 #include "page3.h"
+#include "shouyecanshu.h"
 
 page2::page2(QWidget *parent) :
     QWidget(parent),
@@ -25,6 +26,7 @@ page2::page2(QWidget *parent) :
     connect(ui->QRcode,SIGNAL(clicked()),this,SLOT(showQRcode()));
     connect(ui->print,SIGNAL(clicked()),this,SLOT(showPrint()));
     connect(ui->next,SIGNAL(clicked()),this,SLOT(showNext()));
+    connect(ui->editBtn,SIGNAL(clicked()),this,SLOT(showEditIndex()));
 }
 
 page2::~page2()
@@ -99,5 +101,12 @@ void page2::showNext()
 {
     Page3 *showNext=new Page3();
     showNext->show();
+    this->close();
+}
+
+void page2::showEditIndex()
+{
+    Shouyecanshu *showEditIndex=new Shouyecanshu();
+    showEditIndex->show();
     this->close();
 }

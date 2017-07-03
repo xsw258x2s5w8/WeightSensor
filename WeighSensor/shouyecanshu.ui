@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>page2</class>
- <widget class="QWidget" name="page2">
+ <class>Shouyecanshu</class>
+ <widget class="QWidget" name="Shouyecanshu">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>678</width>
-    <height>482</height>
+    <width>671</width>
+    <height>477</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
@@ -109,141 +109,160 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetDefaultConstraint</enum>
-        </property>
-        <property name="margin">
-         <number>20</number>
-        </property>
-        <property name="spacing">
-         <number>20</number>
-        </property>
-        <item row="1" column="3">
-         <widget class="QPushButton" name="print">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>打印设置 (未做)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="unmanned">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>无人值守</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QPushButton" name="check">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>检测</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="editBtn">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
           <property name="text">
            <string>编辑主界面</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="adjustable">
-          <property name="minimumSize">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>66</width>
-            <height>66</height>
+            <width>40</width>
+            <height>20</height>
            </size>
           </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_26">
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_11"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/image/images/find.svg);</string>
+          </property>
           <property name="text">
-           <string>调秤</string>
+           <string/>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="video">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>视频设置</string>
-          </property>
-         </widget>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="text">
+             <string>/\</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="QRcode">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>二维码管理</string>
-          </property>
-         </widget>
+        <item>
+         <widget class="QTreeView" name="treeView"/>
         </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="permission">
-          <property name="minimumSize">
-           <size>
-            <width>66</width>
-            <height>66</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>权限选择</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="4" rowspan="2">
-         <widget class="QPushButton" name="next">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>next</string>
-          </property>
-          <property name="flat">
-           <bool>false</bool>
-          </property>
-         </widget>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="text">
+             <string>增加</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="text">
+             <string>\/</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -251,7 +270,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QPushButton" name="returnIndex">
        <property name="font">
@@ -281,7 +300,27 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="horizontalSpacer_8">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>保存</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>

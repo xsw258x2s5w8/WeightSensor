@@ -252,14 +252,14 @@
        <item>
         <widget class="QPushButton" name="pushButton_7">
          <property name="text">
-          <string>PushButton</string>
+          <string>保存</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_8">
          <property name="text">
-          <string>PushButton</string>
+          <string>清空</string>
          </property>
         </widget>
        </item>
