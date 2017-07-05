@@ -91,7 +91,12 @@ SOURCES += main.cpp\
     shiboqi.cpp \
     huohao.cpp \
     liuchengshezhi.cpp \
-    shouyecanshu.cpp
+    shouyecanshu.cpp \
+    mylineedit.cpp \
+    chehao.cpp \
+    huohaoshezhi.cpp \
+    mylineedit1.cpp \
+    mywidget.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -171,7 +176,12 @@ HEADERS  += index.h \
     shiboqi.h \
     huohao.h \
     liuchengshezhi.h \
-    shouyecanshu.h
+    shouyecanshu.h \
+    mylineedit.h \
+    chehao.h \
+    huohaoshezhi.h \
+    mylineedit1.h \
+    mywidget.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -251,7 +261,9 @@ FORMS    += index.ui \
     shiboqi.ui \
     huohao.ui \
     liuchengshezhi.ui \
-    shouyecanshu.ui
+    shouyecanshu.ui \
+    chehao.ui \
+    huohaoshezhi.ui
 
 TRANSLATIONS =WeighSensor.ts
 

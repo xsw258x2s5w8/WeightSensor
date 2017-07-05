@@ -17,6 +17,9 @@ public:
     
 private:
     Ui::Huohao *ui;
+
+public slots:
+    void showhuohaoshezhi();
 };
 
 #endif // HUOHAO_H

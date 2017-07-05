@@ -5,6 +5,7 @@
 #include "lishijilu.h"
 #include "yiciguobang.h"
 #include "erciguobang.h"
+#include "shipin.h"
 
 Index::Index(QWidget *parent) :
     QMainWindow(parent),
@@ -16,6 +17,7 @@ Index::Index(QWidget *parent) :
     connect(ui->print,SIGNAL(clicked()),this,SLOT(showPrint()));
     connect(ui->yiciguobang,SIGNAL(clicked()),this,SLOT(showYiguobang()));
     connect(ui->erciguobang,SIGNAL(clicked()),this,SLOT(showErciguobang()));
+    connect(ui->shipin,SIGNAL(clicked()),this,SLOT(showShipin()));
 }
 
 Index::~Index()
@@ -55,5 +57,12 @@ void Index::showErciguobang()
 {
     Erciguobang *showErciguobang=new Erciguobang();
     showErciguobang->show();
+    this->close();
+}
+
+void Index::showShipin()
+{
+    Shipin *showShipin = new Shipin();
+    showShipin->show();
     this->close();
 }

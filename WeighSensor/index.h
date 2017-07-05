@@ -24,6 +24,7 @@ public slots:
     void showPrint();//进入打印界面。
     void showYiguobang();//进入一次过磅
     void showErciguobang();//进入二次过磅界面
+    void showShipin();//进入视频界面
 };
 
 #endif // INDEX_H
