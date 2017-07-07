@@ -87,6 +87,7 @@ void Wanzheng_chaxun::doprintPreview()
 
 void Wanzheng_chaxun::printPreview(QPrinter *printer)
 {
+    //------------------------------------绘图法打印（该方法可以自定义）-------------------------------
     QPainter painter;
     if(!painter.begin(printer)) {
         qWarning() << "can't start printer";
@@ -94,12 +95,44 @@ void Wanzheng_chaxun::printPreview(QPrinter *printer)
     }
     // print table
     TablePrinter tablePrinter(&painter, printer);
+
+    //设置header和conent字体
+    QFont font1; // font for header
+    font1.setBold(true);
+    font1.setPointSize(20);
+    tablePrinter.setHeadersFont(font1);
+    QFont font2; // font for content
+    font2.setItalic(true);
+    font2.setPointSize(15);
+    tablePrinter.setHeadersFont(font2);
+
+    //header和content颜色
+    tablePrinter.setHeaderColor(Qt::red);
+    tablePrinter.setContentColor(Qt::blue);
+
+    //显示每列的比例大小
     QVector<int> columnStretch = QVector<int>() << 5 << 5 << 10 << 15;
+
+    //表头属性
     QVector<QString> headers = QVector<QString>() << "Header1" << "Header 2" << "Header 3" << "Header 4";
+
+    //执行打印
     if(!tablePrinter.printTable(model, columnStretch,headers)) {
         qDebug() << tablePrinter.lastError();
     }
     painter.end();
+   //-----------------------------直接打印整个界面的方法-------------------------------
+//    QPainter painter;
+//    painter.begin(printer);
+//    double xscale = printer->pageRect().width()/double(ui->widget->width());
+//    double yscale = printer->pageRect().height()/double(ui->widget->height());
+//    double scale = qMin(xscale, yscale);
+//    painter.translate(printer->paperRect().x() + printer->pageRect().width()/2,
+//                       printer->paperRect().y() + printer->pageRect().height()/2);
+//    painter.scale(scale, scale);
+//    painter.translate(-width()/2, -height()/2);
+
+//   ui->widget->render(&painter);
 }
 
 

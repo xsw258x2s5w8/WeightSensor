@@ -55,8 +55,8 @@ int main(int argc, char *argv[])
 //    Shipin b;
 //    b.show();
 
-    Shiboqi c;
-    c.show();
+//    Shiboqi c;
+//    c.show();
     
     return a.exec();
 }
