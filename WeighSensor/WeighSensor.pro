@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui printsupport sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -96,7 +96,8 @@ SOURCES += main.cpp\
     chehao.cpp \
     huohaoshezhi.cpp \
     mylineedit1.cpp \
-    mywidget.cpp
+    mywidget.cpp \
+    lib/tableprinter.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -181,7 +182,8 @@ HEADERS  += index.h \
     chehao.h \
     huohaoshezhi.h \
     mylineedit1.h \
-    mywidget.h
+    mywidget.h \
+    lib/tableprinter.h
 
 FORMS    += index.ui \
     page2.ui \

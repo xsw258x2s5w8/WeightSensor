@@ -483,7 +483,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="print">
        <property name="text">
         <string>打印</string>
        </property>
@@ -545,32 +545,6 @@
     </layout>
    </item>
   </layout>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>widget</zorder>
-  <zorder>lineEdit</zorder>
-  <zorder>label_2</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>layoutWidget_4</zorder>
-  <zorder>layoutWidget_5</zorder>
-  <zorder>layoutWidget_6</zorder>
-  <zorder>layoutWidget_7</zorder>
-  <zorder>layoutWidget_8</zorder>
-  <zorder>layoutWidget_9</zorder>
-  <zorder>layoutWidget_10</zorder>
-  <zorder>layoutWidget_11</zorder>
-  <zorder>preview</zorder>
-  <zorder>label_23</zorder>
-  <zorder>label_24</zorder>
-  <zorder>label_25</zorder>
-  <zorder>horizontalSpacer_5</zorder>
-  <zorder>horizontalSpacer_6</zorder>
-  <zorder>label_26</zorder>
-  <zorder>label_27</zorder>
-  <zorder>label_28</zorder>
-  <zorder>label_29</zorder>
-  <zorder>label_30</zorder>
-  <zorder>horizontalSpacer_7</zorder>
  </widget>
  <resources>
   <include location="myimages.qrc"/>
