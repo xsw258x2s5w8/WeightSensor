@@ -45,8 +45,14 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QTranslator translator;
+    //加载自定义窗口的翻译文件
     translator.load("../WeighSensor/WeighSensor.qm");
     a.installTranslator(&translator);
+    //加载qt默认窗口的翻译文件
+    translator.load("../WeighSensor/qt_zh_CN.qm");
+    a.installTranslator(&translator);
+
+    //模拟数据库的数据，到时候要删除掉。
     initDb();
 
     Index w;
