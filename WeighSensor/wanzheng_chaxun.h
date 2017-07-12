@@ -27,6 +27,8 @@ public slots:
 
     void doprintPreview();//slotcao
     void printPreview(QPrinter *printer);//预览页面
+
+    void slotPrintPveview();//进入自定义打印界面
 };
 
 #endif // WANZHENG_CHAXUN_H

@@ -4,6 +4,7 @@
 #include "index.h"
 
 #include "lib/tableprinter.h"
+#include "previewprint.h"
 
 #include <QPrinter>
 #include <QPrintPreviewDialog>
@@ -29,6 +30,7 @@ Wanzheng_chaxun::Wanzheng_chaxun(QWidget *parent) :
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->print,SIGNAL(clicked()),this,SLOT(doprintPreview()));//打印按钮的槽
+    connect(ui->direct_Print,SIGNAL(clicked()),this,SLOT(slotPrintPveview()));//打印自定义预览界面的槽
 }
 
 Wanzheng_chaxun::~Wanzheng_chaxun()
@@ -212,6 +214,16 @@ void Wanzheng_chaxun::printPreview(QPrinter *printer)
     painter.end();
 
 
+}
+
+void Wanzheng_chaxun::slotPrintPveview()
+{
+    previewPrint *preview=new previewPrint();
+
+    preview->setWindowFlags(Qt::Window);
+    preview->showFullScreen();
+    preview->show();
+    this->close();
 }
 
 

@@ -97,7 +97,8 @@ SOURCES += main.cpp\
     huohaoshezhi.cpp \
     mylineedit1.cpp \
     mywidget.cpp \
-    lib/tableprinter.cpp
+    lib/tableprinter.cpp \
+    previewprint.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -183,7 +184,8 @@ HEADERS  += index.h \
     huohaoshezhi.h \
     mylineedit1.h \
     mywidget.h \
-    lib/tableprinter.h
+    lib/tableprinter.h \
+    previewprint.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -265,7 +267,8 @@ FORMS    += index.ui \
     liuchengshezhi.ui \
     shouyecanshu.ui \
     chehao.ui \
-    huohaoshezhi.ui
+    huohaoshezhi.ui \
+    previewprint.ui
 
 TRANSLATIONS =WeighSensor.ts
 
