@@ -12,6 +12,8 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlTableModel>
+#include <QTextCodec>
+#include <QFont>
 
 void initDb(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -44,6 +46,19 @@ void initDb(){
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    // 以下部分解决中文乱码
+    QTextCodec *codec = QTextCodec::codecForName("utf8"); //GBK gbk
+    QTextCodec::setCodecForTr(codec);
+    QTextCodec::setCodecForLocale(codec);
+    QTextCodec::setCodecForCStrings(codec);
+
+    QFont font("wenquanyi",12,QFont::Bold);
+    a.setFont(font);
+    // 以上部分解决中文乱码
+
+
+
     QTranslator translator;
     //加载自定义窗口的翻译文件
     translator.load("../WeighSensor/WeighSensor.qm");
@@ -56,6 +71,8 @@ int main(int argc, char *argv[])
     initDb();
 
     Index w;
+    w.setWindowFlags(Qt::Window);
+    w.showFullScreen();
     w.show();
 
 //    Shipin b;

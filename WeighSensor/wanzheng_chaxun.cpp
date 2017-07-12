@@ -105,7 +105,7 @@ void Wanzheng_chaxun::printPreview(QPrinter *printer)
 //    QFont font2; // font for content
 //    font2.setItalic(true);
 //    font2.setPointSize(15);
-//    tablePrinter.setHeadersFont(font2);
+//    tablePrinter.setContentFont(font2);
 
 //    //header和content颜色
 //    tablePrinter.setHeaderColor(Qt::red);
@@ -137,35 +137,81 @@ void Wanzheng_chaxun::printPreview(QPrinter *printer)
     //   ui->widget->render(&painter);
 
     //-------------------------------用html格式来打印表格界面------------------------------
-    QString html;
-    QString html_table1;
-    QString html_table2;
-    QString html_body;
+//    QString html;
+//    QString html_table1;
+//    QString html_table2;
+//    QString html_body;
+//    QVector<QString> headers = QVector<QString>() << "number"<<" DATE1" <<"TIME1"<<"DATE2"<< "TIME2" << "VEHCLE NO " << "GROSS"<<"TARE";
+//    QVector<QString> bodys = QVector<QString>() <<"0001"<< "2017-6-12"<<" 22：54" <<"2017-6-12"<<"22：54"<< "浙B88888 " << "GROSS"<<"TARE";
+//    QString title = headers[0];
+//    QString body = headers[1];
+////    html = "<table width='50%/' border=1 cellspacing=0>"
+////                    "<tr><td bgcolor='lightgray'><font size='+1'>"
+////                    "<b><i>" + title + "</i></b></font><tr><td>" + body
+////                    + "</table><br>";
+
+//    int i=0;
+//    int j=0;
+//    QString width1="200";
+//    html_table1="<table width='100%' border=0 cellspacing=0 >";
+//    html_table2="</table>";
+//    for(j=0;j<120;j++){
+//        for(i=0;i<headers.count();i=i+2){
+//            html_body+=
+//                    "<tr>"
+//                        "<td width="+width1+">"+Qt::escape(headers[i])+"</td><td>"+Qt::escape(bodys[i])+"</td><td>"+headers[i+1]+"</td><td>"+bodys[i+1]+"</td>"
+//                    "</tr>";
+//        }
+//    }
+//    html=html_table1+html_body+html_table2;
+
+
+//    //QPainter painter(printer);
+//    printer->setFromTo(2,3);
+//    printer->setCopyCount(2);
+//    printer->setOrientation(QPrinter::Portrait);
+//    //printer->setFullPage(true);
+//    printer->setPageMargins(100,50,30,10,QPrinter::Point);
+
+//    QTextDocument textDocument;
+//    textDocument.setHtml(html);
+//    textDocument.print(printer);
+
+
+    //----------------------绘图----------------------------------------------------------
     QVector<QString> headers = QVector<QString>() << "number"<<" DATE1" <<"TIME1"<<"DATE2"<< "TIME2" << "VEHCLE NO " << "GROSS"<<"TARE";
     QVector<QString> bodys = QVector<QString>() <<"0001"<< "2017-6-12"<<" 22：54" <<"2017-6-12"<<"22：54"<< "浙B88888 " << "GROSS"<<"TARE";
-    QString title = headers[0];
-    QString body = headers[1];
-//    html = "<table width='100%/' border=1 cellspacing=0>"
-//                    "<tr><td bgcolor='lightgray'><font size='+1'>"
-//                    "<b><i>" + title + "</i></b></font><tr><td>" + body
-//                    + "</table><br>";
+    QPainter painter;
+    painter.begin(printer);
 
-    int i=0;
-    html_table1="<table width='100%' border=1 cellspacing=0>";
-    html_table2="</table>";
-    for(i=0;i<headers.count();i=i+2){
-        html_body+=
-                "<tr>"
-                    "<td>"+Qt::escape(headers[i])+"</td><td>"+Qt::escape(bodys[i])+"</td><td>"+headers[i+1]+"</td><td>"+bodys[i+1]+"</td>"
-                "</tr>";
+    int i;
+    int m=0;
+    int height=50;//字段属性的上下间隔
+    int width=150;  //联的宽度
+    for(i=0;i<headers.count();i++){
+        //QRect rec(leftMargin, topMargin, columnWidth[i] - rightMargin - leftMargin, maxHeight);
+        QRect rec(10, 10+m, 100, 20);
+        painter.drawText(rec, Qt::AlignLeft | Qt::TextWordWrap, headers[i]);
+
+        QRect rec1(100+width, 10+m, 100, 20);
+        painter.drawText(rec1, Qt::AlignLeft | Qt::TextWordWrap, bodys[i]);
+
+        m=m+height;
     }
-    html=html_table1+html_body+html_table2;
+
+    for(i=0;i<headers.count();i++){
+        //QRect rec(leftMargin, topMargin, columnWidth[i] - rightMargin - leftMargin, maxHeight);
+        QRect rec2(10, 100+m, 100, 20);
+        painter.drawText(rec2, Qt::AlignLeft | Qt::TextWordWrap, headers[i]);
+
+        QRect rec13(100+width+60, 100+m, 100, 20);
+        painter.drawText(rec13, Qt::AlignLeft | Qt::TextWordWrap, bodys[i]);
+
+        m=m+height;
+    }
+    painter.end();
 
 
-    //QPainter painter(printer);
-    QTextDocument textDocument;
-    textDocument.setHtml(html);
-    textDocument.print(printer);
 }
 
 
