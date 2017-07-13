@@ -21,14 +21,18 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QLabel" name="xiangshang">
+          <widget class="QLabel" name="xiangshangdsf">
            <property name="text">
             <string>向上：</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="xiangshang_2"/>
+          <widget class="QLineEdit" name="xiangshang">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -42,7 +46,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="xiangzuo"/>
+          <widget class="QLineEdit" name="xiangzuo">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -56,7 +64,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="jianju"/>
+          <widget class="QLineEdit" name="jianju">
+           <property name="text">
+            <string>10</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -84,7 +96,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="width"/>
+          <widget class="QLineEdit" name="width">
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -102,7 +118,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="xiangxia"/>
+          <widget class="QLineEdit" name="xiangxia">
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -116,7 +136,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="xiangyou"/>
+          <widget class="QLineEdit" name="xiangyou">
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -158,7 +182,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="height"/>
+          <widget class="QLineEdit" name="height">
+           <property name="text">
+            <string>50</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -191,8 +219,8 @@
     </layout>
    </item>
   </layout>
+  <zorder>xiangshangdsf</zorder>
   <zorder>xiangshang</zorder>
-  <zorder>xiangshang_2</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget_2</zorder>
   <zorder>layoutWidget_3</zorder>

@@ -15,6 +15,8 @@
 #include <QSqlError>
 #include <QSqlTableModel>
 #include<QTextDocument>
+#include <testpreviewdialogsetup.h>
+#include<QDebug>
 
 Wanzheng_chaxun::Wanzheng_chaxun(QWidget *parent) :
     QWidget(parent),
@@ -31,6 +33,7 @@ Wanzheng_chaxun::Wanzheng_chaxun(QWidget *parent) :
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->print,SIGNAL(clicked()),this,SLOT(doprintPreview()));//打印按钮的槽
     connect(ui->direct_Print,SIGNAL(clicked()),this,SLOT(slotPrintPveview()));//打印自定义预览界面的槽
+    connect(ui->setupPrint,SIGNAL(clicked()),this,SLOT(slotSetupPrint()));
 
     //自定义的预览页面
     preview=new previewPrint();
@@ -230,7 +233,25 @@ void Wanzheng_chaxun::slotPrintPveview()
 
 void Wanzheng_chaxun::slotSetupPrint()
 {
+    testPreviewDialogSetup *test=new testPreviewDialogSetup();
+    connect(test,SIGNAL(SignalsendString(QStringList)),this,SLOT(SlotGetString(QStringList)));
+    test->show();
+}
 
+void Wanzheng_chaxun::SlotGetString(QStringList strList)
+{
+    qDebug()<<strList[0].toInt();
+    //解析数据并进行对preview的设置
+    preview->setTopDistance(strList[0].toInt());
+    preview->setBottomDistance(strList[1].toInt());
+    preview->setLeftDistance(strList[2].toInt());
+    preview->setRightDistance(strList[3].toInt());
+    preview->setCellMargin(strList[4].toInt());
+    preview->setCellWidth(strList[5].toInt());
+    preview->setCellHeight(strList[6].toInt());
+
+    //更新preview界面，重新发射paintRequest信号
+    preview->updatePre();
 }
 
 

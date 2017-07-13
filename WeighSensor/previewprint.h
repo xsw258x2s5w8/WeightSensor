@@ -46,6 +46,7 @@ private:
 private:
     void rePaint();
 
+
 public slots:
     void slotprint(QPrinter *);//用于调用最开始的预览界面
 
@@ -66,18 +67,21 @@ public:
     void setRightDistance(int rightDistance);
 
     //联单间隔
-    void setCellMargin();
+    void setCellMargin(int cellMargin);
 
     //绘画开始坐标点
-    void setInitX();
-    void setInitY();
+    void setInitX(int initX);
+    void setInitY(int initY);
 
     //每行字段之间的距离
-    void setCellTocellDistance();
+    void setCellTocellDistance(int cellTocellDistance);
 
     //字体长寛高
-    void setCellWidth();
-    void setCellHeight();
+    void setCellWidth(int cellWidth);
+    void setCellHeight(int cellHeight);
+
+    //成员函数
+    void updatePre();//重新发射paintRequest信号，，更新画面
 };
 
 #endif // PREVIEWPRINT_H

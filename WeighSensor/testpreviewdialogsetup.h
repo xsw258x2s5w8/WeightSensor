@@ -17,6 +17,12 @@ public:
     
 private:
     Ui::testPreviewDialogSetup *ui;
+
+signals:
+    void SignalsendString(QStringList strList);
+
+public slots:
+    void sendOK();
 };
 
 #endif // TESTPREVIEWDIALOGSETUP_H

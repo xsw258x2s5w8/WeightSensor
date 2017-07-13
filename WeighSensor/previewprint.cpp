@@ -189,4 +189,44 @@ void previewPrint::setLeftDistance(int leftDistance)
     this->leftDistance=leftDistance;
 }
 
+void previewPrint::setRightDistance(int rightDistance)
+{
+    this->rightDistance=rightDistance;
+}
+
+void previewPrint::setCellMargin(int cellMargin)
+{
+    this->cellMargin=cellMargin;
+}
+
+void previewPrint::setInitX(int initX)
+{
+    this->initX=initX;
+}
+
+void previewPrint::setInitY(int initY)
+{
+    this->initY=initY;
+}
+
+void previewPrint::setCellTocellDistance(int cellTocellDistance)
+{
+    this->cellTocellDistance=cellTocellDistance;
+}
+
+void previewPrint::setCellWidth(int cellWidth)
+{
+    this->cellWidth=cellWidth;
+}
+
+void previewPrint::setCellHeight(int cellHeight)
+{
+    this->cellHeight=cellHeight;
+}
+
+void previewPrint::updatePre()
+{
+    preview->updatePreview();
+}
+
 
