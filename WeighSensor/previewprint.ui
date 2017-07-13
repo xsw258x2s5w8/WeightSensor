@@ -33,6 +33,47 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="deflate">
+       <property name="text">
+        <string>缩小</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="amplify">
+       <property name="text">
+        <string>放大</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="print">
+       <property name="text">
+        <string>打印</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pageSetup">
+       <property name="text">
+        <string>页面设置</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="close">
        <property name="text">
         <string>关闭</string>

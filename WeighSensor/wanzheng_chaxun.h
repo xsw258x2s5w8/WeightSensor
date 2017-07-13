@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QSqlTableModel>
+#include <previewprint.h>
 
 namespace Ui {
 class Wanzheng_chaxun;
@@ -19,6 +20,8 @@ public:
 private:
     Ui::Wanzheng_chaxun *ui;
     QSqlTableModel *model;
+
+    previewPrint *preview;
   //  void initDb();
 
 public slots:
@@ -29,6 +32,8 @@ public slots:
     void printPreview(QPrinter *printer);//预览页面
 
     void slotPrintPveview();//进入自定义打印界面
+
+    void slotSetupPrint();//设置  目前是用来测试的
 };
 
 #endif // WANZHENG_CHAXUN_H

@@ -31,6 +31,9 @@ Wanzheng_chaxun::Wanzheng_chaxun(QWidget *parent) :
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->print,SIGNAL(clicked()),this,SLOT(doprintPreview()));//打印按钮的槽
     connect(ui->direct_Print,SIGNAL(clicked()),this,SLOT(slotPrintPveview()));//打印自定义预览界面的槽
+
+    //自定义的预览页面
+    preview=new previewPrint();
 }
 
 Wanzheng_chaxun::~Wanzheng_chaxun()
@@ -218,12 +221,16 @@ void Wanzheng_chaxun::printPreview(QPrinter *printer)
 
 void Wanzheng_chaxun::slotPrintPveview()
 {
-    previewPrint *preview=new previewPrint();
 
     preview->setWindowFlags(Qt::Window);
     preview->showFullScreen();
     preview->show();
-    this->close();
+    //this->close();
+}
+
+void Wanzheng_chaxun::slotSetupPrint()
+{
+
 }
 
 

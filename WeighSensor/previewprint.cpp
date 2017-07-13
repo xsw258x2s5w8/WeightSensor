@@ -2,6 +2,10 @@
 #include "ui_previewprint.h"
 
 #include <QPainter>
+#include <QPrintDialog>
+#include <QPageSetupDialog>
+
+#include <testpreviewdialogsetup.h>
 
 previewPrint::previewPrint(QWidget *parent) :
     QWidget(parent),
@@ -9,21 +13,43 @@ previewPrint::previewPrint(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->close,SIGNAL(clicked()),this,SLOT(slotClose()));
+    connect(ui->deflate,SIGNAL(clicked()),this,SLOT(slotZoomOut()));//缩小
+    connect(ui->amplify,SIGNAL(clicked()),this,SLOT(slotZoomIn()));//放大
+    connect(ui->print,SIGNAL(clicked()),this,SLOT(slotPrint()));
+    connect(ui->pageSetup,SIGNAL(clicked()),this,SLOT(slotPageSetup()));
 
 
+
+    //----------------------参数初始化-------------------------------
+    // cell margins
+    topDistance=0;
+    bottomDistance=100;
+    leftDistance=0;
+    rightDistance=100;
+
+    //联单间隔
+    cellMargin=10;
+
+    //绘画开始坐标点
+    initX=10;
+    initY=10;
+
+    //每行字段之间的距离
+    cellTocellDistance=50;
+
+    //字体长寛高
+    cellWidth=100;
+    cellHeight=50;
+
+    //---------------------创建预览界面------------------------
     printer = new QPrinter(QPrinter::PrinterResolution);
-    printer->setOutputFormat(QPrinter::PdfFormat);
-    printer->setOutputFileName("sample.pdf");
-    printer->setPaperSize(QPrinter::A4);
-    printer->setFullPage(true);
-    printer->setResolution(300);
+
 
     preview = new QPrintPreviewWidget(printer, this);
     ui->verticalLayout->addWidget(preview);
     preview->setFont(QFont("Arial",18,QFont::Bold));
     //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(print()));
     connect(preview, SIGNAL(paintRequested(QPrinter*)), this, SLOT(slotprint(QPrinter*)));
-
     preview->setZoomFactor(1);
     preview->show();
 }
@@ -33,8 +59,43 @@ previewPrint::~previewPrint()
     delete ui;
 }
 
+void previewPrint::rePaint()
+{
+    QVector<QString> headers = QVector<QString>() << "number"<<" DATE1" <<"TIME1"<<"DATE2"<< "TIME2" << "VEHCLE NO " << "GROSS"<<"TARE";
+    QVector<QString> bodys = QVector<QString>() <<"0001"<< "2017-6-12"<<" 22：54" <<"2017-6-12"<<"22：54"<< "浙B88888 " << "GROSS"<<"TARE";
+    QPainter painter;
 
-void previewPrint::slotprint(QPrinter *printer)
+    painter.begin(printer);
+    //painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform, true);
+
+    int i;
+    int m=0;
+    int height=50;//字段属性的上下间隔
+    int width=100;  //联的宽度
+    for(i=0;i<headers.count();i++){
+        //QRect rec(leftMargin, topMargin, columnWidth[i] - rightMargin - leftMargin, maxHeight);
+        QRect rec(initX-leftDistance+rightDistance, initY+m-topDistance+bottomDistance, cellWidth, cellHeight);
+        painter.drawText(rec, Qt::AlignLeft | Qt::TextWordWrap, headers[i]);
+
+        QRect rec1(initX+cellWidth+cellMargin+initX-leftDistance+rightDistance, initY+m-topDistance+bottomDistance, cellWidth, cellHeight);
+        painter.drawText(rec1, Qt::AlignLeft | Qt::TextWordWrap, bodys[i]);
+
+        m+=cellTocellDistance;
+    }
+
+   //if() 绘画新的一页
+    //printer->newPage();
+
+
+
+    painter.end();
+}
+
+
+
+
+
+void previewPrint::slotprint(QPrinter *)
 {
 //    QPainter p(printer);
 //        p.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform, true);
@@ -50,58 +111,82 @@ void previewPrint::slotprint(QPrinter *printer)
 //        }
 
         //----------------------绘图----------------------------------------------------------
-
-        QVector<QString> headers = QVector<QString>() << "number"<<" DATE1" <<"TIME1"<<"DATE2"<< "TIME2" << "VEHCLE NO " << "GROSS"<<"TARE";
-        QVector<QString> bodys = QVector<QString>() <<"0001"<< "2017-6-12"<<" 22：54" <<"2017-6-12"<<"22：54"<< "浙B88888 " << "GROSS"<<"TARE";
-        QPainter painter;
-
-        painter.begin(printer);
-        //painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing | QPainter::SmoothPixmapTransform, true);
-
-        int i;
-        int m=0;
-        int height=50;//字段属性的上下间隔
-        int width=500;  //联的宽度
-        for(i=0;i<headers.count();i++){
-            //QRect rec(leftMargin, topMargin, columnWidth[i] - rightMargin - leftMargin, maxHeight);
-            QRect rec(10, 10+m, 200, 50);
-            painter.drawText(rec, Qt::AlignLeft | Qt::TextWordWrap, headers[i]);
-
-            QRect rec1(100+width, 10+m, 200, 50);
-            painter.drawText(rec1, Qt::AlignLeft | Qt::TextWordWrap, bodys[i]);
-
-            m=m+height;
-        }
-
-        printer->newPage();
-        for(i=0;i<headers.count();i++){
-            //QRect rec(leftMargin, topMargin, columnWidth[i] - rightMargin - leftMargin, maxHeight);
-            QRect rec2(10, 100+m, 200, 50);
-            painter.drawText(rec2, Qt::AlignLeft | Qt::TextWordWrap, headers[i]);
-
-            QRect rec13(100+width+200, 100+m, 200, 50);
-            painter.drawText(rec13, Qt::AlignLeft | Qt::TextWordWrap, bodys[i]);
-
-            m=m+height;
-        }
-
-        printer->newPage();
-        for(i=0;i<headers.count();i++){
-            //QRect rec(leftMargin, topMargin, columnWidth[i] - rightMargin - leftMargin, maxHeight);
-            QRect rec2(10, 100+m, 200, 50);
-            painter.drawText(rec2, Qt::AlignLeft | Qt::TextWordWrap, headers[i]);
-
-            QRect rec13(100+width+200, 100+m, 200, 50);
-            painter.drawText(rec13, Qt::AlignLeft | Qt::TextWordWrap, bodys[i]);
-
-            m=m+height;
-        }
-
-
-        painter.end();
+        rePaint();
 }
 
 void previewPrint::slotClose()
 {
     this->close();
 }
+
+void previewPrint::slotZoomIn()
+{
+    preview->zoomIn();
+}
+
+void previewPrint::slotZoomOut()
+{
+    preview->zoomOut();
+}
+
+void previewPrint::slotPrint()
+{
+    QPrintDialog dlg(printer);
+
+    if(dlg.exec()==QDialog::Accepted){
+        preview->print();
+    }
+}
+
+void previewPrint::slotPageSetup()
+{
+//   // preview->close();
+//     bottomDistance=400;
+//    preview = new QPrintPreviewWidget(printer, this);
+//    ui->verticalLayout->addWidget(preview);
+//    preview->setFont(QFont("Arial",18,QFont::Bold));
+//    //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(print()));
+//    //connect(preview, SIGNAL(paintRequested(QPrinter*)), this, SLOT(slotprint(QPrinter*)));
+
+//    //rePaint();
+//    preview->setZoomFactor(1);
+//    preview->show();
+    QPageSetupDialog pageSetup(printer);
+    if (pageSetup.exec() == QDialog::Accepted) {
+        // update possible orientation changes
+        if (preview->orientation() == QPrinter::Portrait) {
+            preview->setPortraitOrientation();
+        }else {
+            preview->setLandscapeOrientation();
+        }
+    }
+//    bottomDistance=200;
+//    rePaint(printer);
+//    testPreviewDialogSetup *p=new testPreviewDialogSetup();
+//    if(p->exec()){
+//        bottomDistance=200;
+//        rePaint(printer);
+//    }
+}
+
+void previewPrint::slotSetup()
+{
+
+}
+
+void previewPrint::setTopDistance(int topDistance)
+{
+    this->topDistance=topDistance;
+}
+
+void previewPrint::setBottomDistance(int bottomDistance)
+{
+    this->bottomDistance=bottomDistance;
+}
+
+void previewPrint::setLeftDistance(int leftDistance)
+{
+    this->leftDistance=leftDistance;
+}
+
+
