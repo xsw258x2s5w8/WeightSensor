@@ -6,6 +6,10 @@
 #include <QPageSetupDialog>
 
 #include <testpreviewdialogsetup.h>
+#include<QDebug>
+#include<QProcess>
+#include <sys/stat.h>
+#include<QDateTime>
 
 previewPrint::previewPrint(QWidget *parent) :
     QWidget(parent),
@@ -131,11 +135,31 @@ void previewPrint::slotZoomOut()
 
 void previewPrint::slotPrint()
 {
-    QPrintDialog dlg(printer);
 
-    if(dlg.exec()==QDialog::Accepted){
-        preview->print();
-    }
+
+    //QPrintDialog dlg(printer);
+
+    //printer->setPrinterName("usblp0");
+    //printer->setPrintProgram("foo2zjs");
+    printer->setOutputFormat(QPrinter::PostScriptFormat);
+    printer->setOutputFileName("/opt/qt4.8.5/demos/chess.ps");
+
+    sleep(5);
+    QDateTime time = QDateTime::currentDateTime();//获取系统现在的时间
+    QString str = time.toString("yyyy-MM-dd hh:mm:ss ddd"); //设置显示格式
+    qDebug()<<"shengcheng ok:"<<str;
+
+    QProcess::execute("gs -q -dBATCH -dSAFER -dQUIET -dNOPAUSE -sPAPERSIZE=a4 -r600x600 -sDEVICE=pbmraw -sOutputFile=/opt/qt4.8.5/demos/test_1.pbm /opt/qt4.8.5/demos/chess.ps");
+    time = QDateTime::currentDateTime();//获取系统现在的时间
+    QString str1=time.toString("yyyy-MM-dd hh:mm:ss ddd"); //设置显示格式
+    qDebug()<<"zhuanhuan ok"<<str1;
+    sleep(10);
+    QProcess::execute("foo2zjs -z1 -p9 -r600x600 test_1.pbm > /dev/usb/lp0");
+   // if(dlgw.exec()==QDialog::Accepted){
+
+
+    preview->print();
+    //}
 }
 
 void previewPrint::slotPageSetup()

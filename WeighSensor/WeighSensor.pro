@@ -99,7 +99,8 @@ SOURCES += main.cpp\
     mywidget.cpp \
     lib/tableprinter.cpp \
     previewprint.cpp \
-    testpreviewdialogsetup.cpp
+    testpreviewdialogsetup.cpp \
+    erciguobang_car.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -187,7 +188,8 @@ HEADERS  += index.h \
     mywidget.h \
     lib/tableprinter.h \
     previewprint.h \
-    testpreviewdialogsetup.h
+    testpreviewdialogsetup.h \
+    erciguobang_car.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -271,7 +273,8 @@ FORMS    += index.ui \
     chehao.ui \
     huohaoshezhi.ui \
     previewprint.ui \
-    testpreviewdialogsetup.ui
+    testpreviewdialogsetup.ui \
+    erciguobang_car.ui
 
 TRANSLATIONS =WeighSensor.ts
 
