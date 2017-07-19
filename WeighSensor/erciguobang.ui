@@ -148,7 +148,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_11">
+         <widget class="QLabel" name="lastTime">
           <property name="text">
            <string>2017-06-12 17：00</string>
           </property>
@@ -171,7 +171,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="currentTime">
             <property name="text">
              <string>2017-06-12 17：00</string>
             </property>
@@ -240,7 +240,7 @@
           <item>
            <widget class="QLabel" name="label_7">
             <property name="text">
-             <string>备号：</string>
+             <string>备注：</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -353,14 +353,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="replaceBtn">
        <property name="text">
-        <string>切换上次</string>
+        <string>替换上次</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="okbtn">
        <property name="text">
         <string>确认</string>
        </property>

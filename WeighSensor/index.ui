@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>596</width>
-    <height>398</height>
+    <width>589</width>
+    <height>354</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -119,38 +119,65 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout" stretch="2,1">
+            <layout class="QVBoxLayout" name="verticalLayout" stretch="5,1">
              <property name="sizeConstraint">
               <enum>QLayout::SetDefaultConstraint</enum>
              </property>
              <item>
-              <widget class="QLabel" name="label_5">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::Box</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Sunken</enum>
-               </property>
-               <property name="text">
-                <string>称重传感器状况：   kg</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <property name="text">
+                  <string>称重传感器状况：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="weight_label">
+                 <property name="text">
+                  <string>320</string>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>  kg</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -204,15 +231,23 @@
              <item row="0" column="2">
               <widget class="QLabel" name="label_2">
                <property name="text">
-                <string>货号l</string>
+                <string>货号</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="mylineedit" name="lineEdit_3"/>
+              <widget class="mylineedit" name="lineEdit_car">
+               <property name="text">
+                <string>浙B8888</string>
+               </property>
+              </widget>
              </item>
              <item row="0" column="3">
-              <widget class="mylineedit1" name="lineEdit_2"/>
+              <widget class="mylineedit1" name="lineEdit_art">
+               <property name="text">
+                <string>水果</string>
+               </property>
+              </widget>
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="label_3">
@@ -229,7 +264,11 @@
               </widget>
              </item>
              <item row="1" column="3">
-              <widget class="QLineEdit" name="lineEdit_4"/>
+              <widget class="QLineEdit" name="lineEdit_remark">
+               <property name="text">
+                <string>羽流商贩</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>

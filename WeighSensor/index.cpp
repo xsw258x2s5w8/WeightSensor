@@ -56,6 +56,12 @@ void Index::showYiguobang()
 void Index::showErciguobang()
 {
     Erciguobang *showErciguobang=new Erciguobang();
+    showErciguobang->getWeight(ui->weight_label->text());
+    QStringList strList;
+    strList.append(ui->lineEdit_car->text());
+    strList.append(ui->lineEdit_art->text());
+    strList.append(ui->lineEdit_remark->text());
+    showErciguobang->showData(strList);
     showErciguobang->show();
     this->close();
 }

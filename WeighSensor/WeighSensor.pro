@@ -100,7 +100,9 @@ SOURCES += main.cpp\
     lib/tableprinter.cpp \
     previewprint.cpp \
     testpreviewdialogsetup.cpp \
-    erciguobang_car.cpp
+    erciguobang_car.cpp \
+    erciguobang_art.cpp \
+    erciguobang_carname1.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -189,7 +191,9 @@ HEADERS  += index.h \
     lib/tableprinter.h \
     previewprint.h \
     testpreviewdialogsetup.h \
-    erciguobang_car.h
+    erciguobang_car.h \
+    erciguobang_art.h \
+    erciguobang_carname1.h
 
 FORMS    += index.ui \
     page2.ui \
