@@ -13,7 +13,7 @@ public:
     int updateData(CarIdManagement carIdManagement);//修改CarIdManagement数据
 
     //其他接口
-    CarIdManagement selectDataByCarId(QString carId);//通过carId来查找车辆信息
+    float selectDataByCarId(QString carId);//通过carId来查找车辆信息
 
 private:
     QSqlDatabase database;

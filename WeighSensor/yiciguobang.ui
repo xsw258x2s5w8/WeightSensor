@@ -150,7 +150,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="currentTime">
             <property name="text">
              <string>2017-06-12 17：00</string>
             </property>
@@ -171,7 +171,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit">
+           <widget class="QLineEdit" name="lineEdit_carId">
             <property name="text">
              <string>浙B8888</string>
             </property>
@@ -192,7 +192,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_2">
+           <widget class="QLineEdit" name="lineEdit_artId">
             <property name="text">
              <string>4563456</string>
             </property>
@@ -213,7 +213,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_3">
+           <widget class="QLineEdit" name="lineEdit_remark">
             <property name="text">
              <string>456456</string>
             </property>
@@ -234,9 +234,9 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_9">
+           <widget class="QLabel" name="label_tare">
             <property name="text">
-             <string>1234kg</string>
+             <string>0</string>
             </property>
            </widget>
           </item>
@@ -313,14 +313,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="cheliangBtn">
        <property name="text">
         <string>车辆</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="okBtn">
        <property name="text">
         <string>确认</string>
        </property>

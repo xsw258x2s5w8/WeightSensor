@@ -4,7 +4,10 @@
 WeightRecordsImpl::WeightRecordsImpl()
 {
     //创建数据库连接
-    this->database = QSqlDatabase::addDatabase("QSQLITE");
+    if(QSqlDatabase::contains("qt_sql_default_connection"))
+      this->database = QSqlDatabase::database("qt_sql_default_connection");
+    else
+      this->database = QSqlDatabase::addDatabase("QSQLITE");
     //设置数据库
     database.setDatabaseName("/home/hyl/Project/WeightSensor/WeighSensor/data/D28QT.db");
     //打开连接

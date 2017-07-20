@@ -37,7 +37,7 @@ Erciguobang::~Erciguobang()
 void Erciguobang::getWeight(QString data)
 {
    carWeight=data.toFloat();
-   ui->currentTime->setText(data);
+   //ui->currentTime->setText(data);
 }
 
 void Erciguobang::showData(QStringList strList)

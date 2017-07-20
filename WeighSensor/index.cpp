@@ -49,6 +49,16 @@ void Index::showPrint()
 void Index::showYiguobang()
 {
     Yiciguobang *showYiguobang=new Yiciguobang();
+    showYiguobang->setCarWeight(ui->weight_label->text());
+    showYiguobang->setCarTare(ui->lineEdit->text());
+
+    QStringList strList;
+    //strList.append(ui->lineEdit->text());//皮重
+    strList.append(ui->lineEdit_car->text());
+    strList.append(ui->lineEdit_art->text());
+    strList.append(ui->lineEdit_remark->text());
+    showYiguobang->showData(strList);  //进入一次过磅页面的显示
+
     showYiguobang->show();
     this->close();
 }
@@ -61,7 +71,7 @@ void Index::showErciguobang()
     strList.append(ui->lineEdit_car->text());
     strList.append(ui->lineEdit_art->text());
     strList.append(ui->lineEdit_remark->text());
-    showErciguobang->showData(strList);
+    showErciguobang->showData(strList);  //进入二次过磅页面的显示
     showErciguobang->show();
     this->close();
 }

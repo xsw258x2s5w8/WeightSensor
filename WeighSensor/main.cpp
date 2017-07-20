@@ -71,8 +71,8 @@ int main(int argc, char *argv[])
 //    initDb();
 
     Index w;
-    w.setWindowFlags(Qt::Window);
-    w.showFullScreen();
+//    w.setWindowFlags(Qt::Window);
+//    w.showFullScreen();
     w.show();
 
 //    Shipin b;
