@@ -150,7 +150,7 @@
         <item>
          <widget class="QLabel" name="lastTime">
           <property name="text">
-           <string>2017-06-12 17：00</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -173,7 +173,7 @@
           <item>
            <widget class="QLabel" name="currentTime">
             <property name="text">
-             <string>2017-06-12 17：00</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -194,7 +194,7 @@
           <item>
            <widget class="QLineEdit" name="lineEdit_car">
             <property name="text">
-             <string>浙B8888</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -222,7 +222,7 @@
           <item>
            <widget class="QLineEdit" name="lineEdit_art">
             <property name="text">
-             <string>4563456</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -250,7 +250,7 @@
           <item>
            <widget class="QLineEdit" name="lineEdit_remark">
             <property name="text">
-             <string>456456</string>
+             <string/>
             </property>
            </widget>
           </item>

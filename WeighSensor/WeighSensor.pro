@@ -102,7 +102,17 @@ SOURCES += main.cpp\
     testpreviewdialogsetup.cpp \
     erciguobang_car.cpp \
     erciguobang_art.cpp \
-    erciguobang_carname1.cpp
+    erciguobang_carname1.cpp \
+    impl/widget.cpp \
+    impl/weightrecordsimpl.cpp \
+    impl/weightrecords.cpp \
+    impl/sqliteimpl.cpp \
+    impl/overweightimpl.cpp \
+    impl/overweight.cpp \
+    impl/caridmanagementimpl.cpp \
+    impl/caridmanagement.cpp \
+    impl/artidmanagementimpl.cpp \
+    impl/artidmanagement.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -193,7 +203,17 @@ HEADERS  += index.h \
     testpreviewdialogsetup.h \
     erciguobang_car.h \
     erciguobang_art.h \
-    erciguobang_carname1.h
+    erciguobang_carname1.h \
+    impl/widget.h \
+    impl/weightrecordsimpl.h \
+    impl/weightrecords.h \
+    impl/sqliteimpl.h \
+    impl/overweightimpl.h \
+    impl/overweight.h \
+    impl/caridmanagementimpl.h \
+    impl/caridmanagement.h \
+    impl/artidmanagementimpl.h \
+    impl/artidmanagement.h
 
 FORMS    += index.ui \
     page2.ui \

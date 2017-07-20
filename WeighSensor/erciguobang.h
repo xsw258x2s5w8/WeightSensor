@@ -5,6 +5,9 @@
 #include <erciguobang_car.h>
 #include <erciguobang_art.h>
 
+#include "impl/weightrecords.h"
+#include "impl/weightrecordsimpl.h"
+
 namespace Ui {
 class Erciguobang;
 }
@@ -43,6 +46,8 @@ public slots:
 
 private:
     float carWeight;
+
+    WeightRecordsImpl *weight;//WeightRecords表访问接口
 };
 
 #endif // ERCIGUOBANG_H

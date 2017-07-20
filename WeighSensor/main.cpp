@@ -67,8 +67,8 @@ int main(int argc, char *argv[])
     translator.load("../WeighSensor/qt_zh_CN.qm");
     a.installTranslator(&translator);
 
-    //模拟数据库的数据，到时候要删除掉。
-    initDb();
+//    //模拟数据库的数据，到时候要删除掉。
+//    initDb();
 
     Index w;
     w.setWindowFlags(Qt::Window);
