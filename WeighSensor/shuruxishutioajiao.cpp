@@ -9,6 +9,8 @@ Shuruxishutioajiao::Shuruxishutioajiao(QWidget *parent) :
     ui(new Ui::Shuruxishutioajiao)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(showValue()));
@@ -21,8 +23,8 @@ Shuruxishutioajiao::~Shuruxishutioajiao()
 
 void Shuruxishutioajiao::returnIndex()
 {
-    Index *index=new Index();
-    index->show();
+//    Index *index=new Index();
+//    index->show();
     this->close();
 }
 

@@ -107,7 +107,7 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,2,2">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,0,2,2">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
@@ -132,6 +132,27 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>记忆皮重：</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_tare">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -216,27 +237,6 @@
            <widget class="QLineEdit" name="lineEdit_remark">
             <property name="text">
              <string>456456</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_8">
-          <item>
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>记忆皮重：</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_tare">
-            <property name="text">
-             <string>0</string>
             </property>
            </widget>
           </item>

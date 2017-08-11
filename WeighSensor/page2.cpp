@@ -16,6 +16,8 @@ page2::page2(QWidget *parent) :
     ui(new Ui::page2)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->permission,SIGNAL(clicked()),this,SLOT(showPermission()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
@@ -36,8 +38,8 @@ page2::~page2()
 
 void page2::returnIndex()
 {
-    Index *index=new Index();
-    index->show();
+//    Index *index=new Index();
+//    index->show();
     this->close();
 }
 
@@ -50,8 +52,8 @@ void page2::showPermission()
 
 void page2::returnPage()
 {
-    Index *index=new Index();
-    index->show();
+//    Index *index=new Index();
+//    index->show();
     this->close();
 }
 

@@ -6,6 +6,8 @@ Quedinggengxin::Quedinggengxin(QWidget *parent) :
     ui(new Ui::Quedinggengxin)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->update,SIGNAL(clicked()),this,SLOT(Update()));
     connect(ui->cancle,SIGNAL(clicked()),this,SLOT(Cancle()));
 }

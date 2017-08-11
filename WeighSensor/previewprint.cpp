@@ -141,24 +141,30 @@ void previewPrint::slotPrint()
 
     //printer->setPrinterName("usblp0");
     //printer->setPrintProgram("foo2zjs");
+
+    //生成pdf文件
     printer->setOutputFormat(QPrinter::PostScriptFormat);
     printer->setOutputFileName("/opt/qt4.8.5/demos/chess.ps");
+    preview->print();
 
     sleep(5);
     QDateTime time = QDateTime::currentDateTime();//获取系统现在的时间
     QString str = time.toString("yyyy-MM-dd hh:mm:ss ddd"); //设置显示格式
     qDebug()<<"shengcheng ok:"<<str;
 
+    //命令行转换
     QProcess::execute("gs -q -dBATCH -dSAFER -dQUIET -dNOPAUSE -sPAPERSIZE=a4 -r600x600 -sDEVICE=pbmraw -sOutputFile=/opt/qt4.8.5/demos/test_1.pbm /opt/qt4.8.5/demos/chess.ps");
     time = QDateTime::currentDateTime();//获取系统现在的时间
     QString str1=time.toString("yyyy-MM-dd hh:mm:ss ddd"); //设置显示格式
     qDebug()<<"zhuanhuan ok"<<str1;
     sleep(10);
-    QProcess::execute("foo2zjs -z1 -p9 -r600x600 test_1.pbm > /dev/usb/lp0");
+
+    //调用打印机
+    QProcess::execute("foo2zjs -z1 -p9 -r600x600 /opt/qt4.8.5/demos/test_1.pbm > /dev/usb/lp0");
    // if(dlgw.exec()==QDialog::Accepted){
 
 
-    preview->print();
+    //preview->print();
     //}
 }
 

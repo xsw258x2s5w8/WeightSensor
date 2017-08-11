@@ -3,6 +3,11 @@
 #include "shiboqi.h"
 #include <QApplication>
 #include <QTranslator>
+#include "language/myinputpannelcontext.h"
+#include "language/russianinputpanelcontext.h"
+#include <QMetaType>
+//#include "lib/DataStruct.h"
+#include "QT_cmd.h"
 
 #include <QPrinter>
 #include <QPrintPreviewDialog>
@@ -57,6 +62,10 @@ int main(int argc, char *argv[])
     a.setFont(font);
     // 以上部分解决中文乱码
 
+    //加载输入法
+    MyInputPannelContext *input=new MyInputPannelContext();
+    a.setInputContext(input);
+
 
 
     QTranslator translator;
@@ -70,16 +79,21 @@ int main(int argc, char *argv[])
 //    //模拟数据库的数据，到时候要删除掉。
 //    initDb();
 
+    //注册自定义参数  以便信号与槽中可以传递该参数
+    qRegisterMetaType<State_Inode>("State_Inode");
+
     Index w;
 //    w.setWindowFlags(Qt::Window);
 //    w.showFullScreen();
     w.show();
 
-//    Shipin b;
-//    b.show();
+    char b[] = "sdf";
+    unsigned char c = 3;
+    unsigned char d = 4;
 
-//    Shiboqi c;
-//    c.show();
-    
+
+   // QT_cmd_initial(b,c,d);
+    //QT_cmd_initial(b,c,d);
+    //QT_cmd_initial(b,c,d);
     return a.exec();
 }

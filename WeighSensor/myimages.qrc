@@ -1,32 +1,46 @@
 <RCC>
+    <qresource prefix="/">
+        <file>images/chepai.jpg</file>
+        <file>language/image/&amp;.png</file>
+        <file>language/image/down.ico</file>
+        <file>language/image/left.ico</file>
+        <file>language/image/right.ico</file>
+        <file>language/image/up.ico</file>
+        <file>language/img/down.png</file>
+        <file>language/img/left.png</file>
+        <file>language/img/right.png</file>
+        <file>language/img/up.png</file>
+        <file>language/keyboard.xml</file>
+        <file>language/russiankeyboard.xml</file>
+    </qresource>
     <qresource prefix="/image">
-        <file>images/radar.png</file>
-        <file>images/warning.png</file>
-        <file>images/RS232.png</file>
-        <file>images/storage.svg</file>
-        <file>images/jia.svg</file>
-        <file>images/jian.svg</file>
-        <file>images/sun.svg</file>
-        <file>images/phone.svg</file>
-        <file>images/light.png</file>
+        <file>images/4g.png</file>
+        <file>images/bl.svg</file>
+        <file>images/bluetooth.svg</file>
+        <file>images/chepai.jpg</file>
         <file>images/code1.svg</file>
         <file>images/code2.svg</file>
-        <file>images/shangyiye.svg</file>
-        <file>images/index.svg</file>
-        <file>images/4g.png</file>
-        <file>images/locate.svg</file>
-        <file>images/wireless.svg</file>
-        <file>images/bl.svg</file>
+        <file>images/diganxianquan.png</file>
         <file>images/find.svg</file>
-        <file>images/bluetooth.svg</file>
+        <file>images/gantan.svg</file>
+        <file>images/index.svg</file>
+        <file>images/jia.svg</file>
+        <file>images/jian.svg</file>
+        <file>images/light.png</file>
+        <file>images/locate.svg</file>
         <file>images/menu.png</file>
+        <file>images/mulu.png</file>
+        <file>images/phone.svg</file>
+        <file>images/radar.png</file>
         <file>images/refresh.svg</file>
+        <file>images/RS232.png</file>
+        <file>images/shangyiye.svg</file>
+        <file>images/shiboqi.png</file>
+        <file>images/storage.svg</file>
+        <file>images/sun.svg</file>
+        <file>images/warning.png</file>
+        <file>images/wireless.svg</file>
         <file>images/xiangshang.svg</file>
         <file>images/xiangxia.svg</file>
-        <file>images/gantan.svg</file>
-        <file>images/mulu.png</file>
-        <file>images/shiboqi.png</file>
-        <file>images/diganxianquan.png</file>
-        <file>images/chepai.jpg</file>
     </qresource>
 </RCC>

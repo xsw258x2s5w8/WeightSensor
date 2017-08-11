@@ -8,6 +8,8 @@ Yazhouqueren::Yazhouqueren(QWidget *parent) :
     ui(new Ui::Yazhouqueren)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
@@ -19,8 +21,8 @@ Yazhouqueren::~Yazhouqueren()
 
 void Yazhouqueren::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

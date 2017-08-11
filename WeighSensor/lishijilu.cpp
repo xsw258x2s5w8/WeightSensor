@@ -11,6 +11,7 @@ Lishijilu::Lishijilu(QWidget *parent) :
     ui(new Ui::Lishijilu)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
@@ -27,15 +28,15 @@ Lishijilu::~Lishijilu()
 
 void Lishijilu::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
 void Lishijilu::returnPage()
 {
-    Index *returnPage=new Index();
-    returnPage->show();
+//    Index *returnPage=new Index();
+//    returnPage->show();
     this->close();
 }
 

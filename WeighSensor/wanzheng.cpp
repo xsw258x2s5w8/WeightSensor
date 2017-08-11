@@ -9,6 +9,8 @@ Wanzheng::Wanzheng(QWidget *parent) :
     ui(new Ui::Wanzheng)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     //combox 属性条目
     QStringList strings;
     strings<<tr("use")<<tr("nouse");
@@ -28,8 +30,8 @@ Wanzheng::~Wanzheng()
 
 void Wanzheng::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

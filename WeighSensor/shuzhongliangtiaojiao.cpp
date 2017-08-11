@@ -9,6 +9,8 @@ Shuzhongliangtiaojiao::Shuzhongliangtiaojiao(QWidget *parent) :
     ui(new Ui::Shuzhongliangtiaojiao)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(showSetWeight()));
@@ -21,8 +23,8 @@ Shuzhongliangtiaojiao::~Shuzhongliangtiaojiao()
 
 void Shuzhongliangtiaojiao::returnIndex()
 {
-    Index *index=new Index();
-    index->show();
+//    Index *index=new Index();
+//    index->show();
     this->close();
 }
 

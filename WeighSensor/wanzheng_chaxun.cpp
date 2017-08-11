@@ -23,6 +23,8 @@ Wanzheng_chaxun::Wanzheng_chaxun(QWidget *parent) :
     ui(new Ui::Wanzheng_chaxun)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
   /***********************模拟的数据**************************/
   //  initDb();
     model = new QSqlTableModel;
@@ -75,8 +77,8 @@ Wanzheng_chaxun::~Wanzheng_chaxun()
 
 void Wanzheng_chaxun::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

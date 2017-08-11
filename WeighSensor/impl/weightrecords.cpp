@@ -11,6 +11,7 @@ WeightRecords::WeightRecords()
     netWeight = 0;
     tare = 0;
     grossWeight = 0;
+    spareWeight = 0;
 }
 int WeightRecords::getId()
 {
@@ -187,8 +188,15 @@ QString WeightRecords::getReserved4()
 {
     return reserved4;
 }
-void WeightRecords::setReserved4(QString reserve4)
+void WeightRecords::setReserved4(QString reserved4)
 {
     this->reserved4 = reserved4;
 }
-
+float WeightRecords::getSpareWeight()
+{
+    return spareWeight;
+}
+void WeightRecords::setSpareWeight(float spareWeight)
+{
+    this->spareWeight = spareWeight;
+}

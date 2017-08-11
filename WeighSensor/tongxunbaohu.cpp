@@ -8,6 +8,8 @@ Tongxunbaohu::Tongxunbaohu(QWidget *parent) :
     ui(new Ui::Tongxunbaohu)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex_2,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
@@ -19,8 +21,8 @@ Tongxunbaohu::~Tongxunbaohu()
 
 void Tongxunbaohu::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

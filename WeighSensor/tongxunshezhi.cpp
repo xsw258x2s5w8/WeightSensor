@@ -8,6 +8,8 @@ Tongxunshezhi::Tongxunshezhi(QWidget *parent) :
     ui(new Ui::Tongxunshezhi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     //combox 属性条目
     QStringList strings;
     strings<<tr("com1")<<tr("com2")<<tr("com3")<<tr("com4");
@@ -25,8 +27,8 @@ Tongxunshezhi::~Tongxunshezhi()
 
 void Tongxunshezhi::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

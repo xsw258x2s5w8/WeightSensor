@@ -8,6 +8,8 @@ Jiandingshijian::Jiandingshijian(QWidget *parent) :
     ui(new Ui::Jiandingshijian)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
@@ -19,8 +21,8 @@ Jiandingshijian::~Jiandingshijian()
 
 void Jiandingshijian::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

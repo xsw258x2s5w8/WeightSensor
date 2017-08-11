@@ -1,5 +1,6 @@
 #ifndef DANGESHEDIZHI_H
 #define DANGESHEDIZHI_H
+#include "lib/DataStruct.h"
 
 #include <QWidget>
 

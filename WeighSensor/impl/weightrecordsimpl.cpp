@@ -5,11 +5,12 @@ WeightRecordsImpl::WeightRecordsImpl()
 {
     //创建数据库连接
     if(QSqlDatabase::contains("qt_sql_default_connection"))
-      this->database = QSqlDatabase::database("qt_sql_default_connection");
+      database = QSqlDatabase::database("qt_sql_default_connection");
     else
-      this->database = QSqlDatabase::addDatabase("QSQLITE");
+      database = QSqlDatabase::addDatabase("QSQLITE");
     //设置数据库
-    database.setDatabaseName("/home/hyl/Project/WeightSensor/WeighSensor/data/D28QT.db");
+    //database.setDatabaseName("/home/hyl/Project/WeightSensor/WeighSensor/data/D28QT.db");
+     database.setDatabaseName("/opt/sqlite/D28QT.db");
     //打开连接
     if( !database.open())
     {
@@ -19,7 +20,7 @@ WeightRecordsImpl::WeightRecordsImpl()
     {
         qDebug( "Connected!" );
         QSqlQuery query;
-        QString createTable_sql = "create table if not exists WeightRecords(id INTEGER PRIMARY KEY AUTOINCREMENT,carId varchar(20),artId varchar(20),grossWeight REAL,tare REAL,netWeight REAL,factoryIn varchar(80),factoryOut varchar(80),userId int,deduction REAL,date1 varchar(20),time1 varchar(20),date2 varchar(20),time2 varchar(20),monitorId int,complete int,ponderation int,remark varchar(255),reserved1 varchar(100),reserved2 varchar(100),reserved3 varchar(100),reserved4 varchar(100))";
+        QString createTable_sql = "create table if not exists WeightRecords(id INTEGER PRIMARY KEY AUTOINCREMENT,carId varchar(20),artId varchar(20),grossWeight REAL,tare REAL,netWeight REAL,factoryIn varchar(80),factoryOut varchar(80),userId int,deduction REAL,date1 varchar(20),time1 varchar(20),date2 varchar(20),time2 varchar(20),monitorId int,complete int,ponderation int,remark varchar(255),reserved1 varchar(100),reserved2 varchar(100),reserved3 varchar(100),reserved4 varchar(100),spareWeight REAL)";
         query.prepare(createTable_sql);
         if(!query.exec())
         {
@@ -106,6 +107,7 @@ WeightRecords WeightRecordsImpl::selectWR(int id)//根据记录id来查找整条
                 weightRecords.setReserved2(query.value(19).toString());
                 weightRecords.setReserved3(query.value(20).toString());
                 weightRecords.setReserved4(query.value(21).toString());
+                weightRecords.setSpareWeight(query.value(22).toFloat());
             }
 
         }
@@ -121,7 +123,7 @@ int WeightRecordsImpl::insertWeightRecords(WeightRecords weightrecords)//weightr
     {
         qDebug()<<"database opened"<<endl;
         QSqlQuery query;
-        QString insert_sql = "insert into WeightRecords(carId,artId,grossWeight,tare,netWeight,factoryIn,factoryOut,userId,deduction,date1,time1,date2,time2,monitorId,complete,ponderation,remark,reserved1,reserved2,reserved3,reserved4) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        QString insert_sql = "insert into WeightRecords(carId,artId,grossWeight,tare,netWeight,factoryIn,factoryOut,userId,deduction,date1,time1,date2,time2,monitorId,complete,ponderation,remark,reserved1,reserved2,reserved3,reserved4,spareWeight) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         //插入数据
         query.prepare(insert_sql);
         //给数据赋值
@@ -188,6 +190,9 @@ int WeightRecordsImpl::insertWeightRecords(WeightRecords weightrecords)//weightr
         QVariantList GroupReserved4;
         GroupReserved4.append(weightrecords.getReserved4());
 
+        QVariantList GroupSpareWeight;
+        GroupSpareWeight.append(weightrecords.getSpareWeight());
+
         //插入到sql语句中
         query.addBindValue(GroupCarId);
         query.addBindValue(GroupArtId);
@@ -210,7 +215,7 @@ int WeightRecordsImpl::insertWeightRecords(WeightRecords weightrecords)//weightr
         query.addBindValue(GroupReserved2);
         query.addBindValue(GroupReserved3);
         query.addBindValue(GroupReserved4);
-
+        query.addBindValue(GroupSpareWeight);
 
         if(!query.execBatch())
         {
@@ -234,7 +239,7 @@ int WeightRecordsImpl::updateWeightRecords(WeightRecords weightrecords)//用来�
         QSqlQuery query;
         int intId = weightrecords.getId();
         QString id = QString::number(intId,10);
-        QString update_sql = "update WeightRecords set date2=?,time2=?,complete=?,grossWeight=?,tare=?,netWeight=?,factoryOut=?,deduction=? where id="+id;
+        QString update_sql = "update WeightRecords set date2=?,time2=?,complete=?,grossWeight=?,tare=?,netWeight=?,factoryIn=?,factoryOut=?,deduction=?,spareWeight=? where id="+id;
         query.prepare(update_sql);
         QVariantList GroupDate2;
         GroupDate2.append(weightrecords.getDate2());
@@ -250,10 +255,12 @@ int WeightRecordsImpl::updateWeightRecords(WeightRecords weightrecords)//用来�
         GroupNetWeight.append(weightrecords.getNetWeight());
         QVariantList GroupFactoryIn;
         GroupFactoryIn.append(weightrecords.getFactoryIn());
-       // QVariantList GroupFactoryOut;
-      //  GroupFactoryOut.append(weightrecords.getFactoryOut());
+        QVariantList GroupFactoryOut;
+        GroupFactoryOut.append(weightrecords.getFactoryOut());
         QVariantList GroupDeduction;
         GroupDeduction.append(weightrecords.getDeduction());
+        QVariantList GroupSpareWeight;
+        GroupSpareWeight.append(weightrecords.getSpareWeight());
         query.addBindValue(GroupDate2);
         query.addBindValue(GroupTime2);
         query.addBindValue(GroupComplete);
@@ -261,9 +268,9 @@ int WeightRecordsImpl::updateWeightRecords(WeightRecords weightrecords)//用来�
         query.addBindValue(GroupTare);
         query.addBindValue(GroupNetWeight);
         query.addBindValue(GroupFactoryIn);
-        //query.addBindValue(GroupFactoryOut);
+        query.addBindValue(GroupFactoryOut);
         query.addBindValue(GroupDeduction);
-
+        query.addBindValue(GroupSpareWeight);
         if(!query.execBatch())
         {
              qDebug()<<query.lastError();
@@ -288,7 +295,7 @@ int WeightRecordsImpl::replaceLastWeightRecords(WeightRecords weightrecords)//�
         QSqlQuery query;
         int intId = weightrecords.getId();
         QString id = QString::number(intId,10);
-        QString update_sql = "update WeightRecords set date1=?,time1=?,date2=?,time2=?,grossWeight=?,tare=?,netWeight=?,deduction=? where id="+id;
+        QString update_sql = "update WeightRecords set date1=?,time1=?,date2=?,time2=?,grossWeight=?,tare=?,netWeight=?,deduction=?,spareWeight=? where id="+id;
         query.prepare(update_sql);
         QVariantList GroupDate1;
         GroupDate1.append(weightrecords.getDate1());
@@ -306,7 +313,8 @@ int WeightRecordsImpl::replaceLastWeightRecords(WeightRecords weightrecords)//�
         GroupNetWeight.append(weightrecords.getNetWeight());
         QVariantList GroupDeduction;
         GroupDeduction.append(weightrecords.getDeduction());
-
+        QVariantList GroupSpareWeight;
+        GroupSpareWeight.append(weightrecords.getSpareWeight());
 
         query.addBindValue(GroupDate1);
         query.addBindValue(GroupTime1);
@@ -316,7 +324,7 @@ int WeightRecordsImpl::replaceLastWeightRecords(WeightRecords weightrecords)//�
         query.addBindValue(GroupTare);
         query.addBindValue(GroupNetWeight);
         query.addBindValue(GroupDeduction);
-
+        query.addBindValue(GroupSpareWeight);
         if(!query.execBatch())
         {
              qDebug()<<query.lastError();
@@ -332,4 +340,106 @@ int WeightRecordsImpl::replaceLastWeightRecords(WeightRecords weightrecords)//�
     }
     database.close();
     return -1;
+}
+
+WeightRecords WeightRecordsImpl::selectWR1(QString carId)//根据记录id来查找整条记录//根据车号查找该车辆最新一次过磅记录
+{
+    WeightRecords weightRecords;
+    if(database.open())
+    {
+        qDebug()<<"database opened";
+        QSqlQuery query;
+
+        QString select_sql = "select * from WeightRecords where carId='" + carId+"' and ponderation=1 order by id desc limit 0,1";
+        query.prepare(select_sql);
+
+        if(!query.exec())
+        {
+             qDebug()<<query.lastError();
+        }
+        else
+        {
+            while(query.next())
+            {
+                weightRecords.setId(query.value(0).toInt());
+                weightRecords.setUserId(query.value(8).toInt());
+                weightRecords.setDate1(query.value(10).toString());
+                weightRecords.setDate2(query.value(12).toString());
+                weightRecords.setTime1(query.value(11).toString());
+                weightRecords.setTime2(query.value(13).toString());
+                weightRecords.setFactoryIn(query.value(6).toString());
+                weightRecords.setFactoryOut(query.value(7).toString());
+                weightRecords.setCarId(query.value(1).toString());
+                weightRecords.setArtId(query.value(2).toString());
+                weightRecords.setGrossWeight(query.value(3).toFloat());
+                weightRecords.setTare(query.value(4).toFloat());
+                weightRecords.setNetWeight(query.value(5).toFloat());
+                weightRecords.setDeduction(query.value(9).toFloat());
+                weightRecords.setMonitorId(query.value(14).toInt());
+                weightRecords.setRemark(query.value(17).toString());
+                weightRecords.setPonderation(query.value(16).toInt());
+                weightRecords.setComplete(query.value(15).toInt());
+                weightRecords.setReserved1(query.value(18).toString());
+                weightRecords.setReserved2(query.value(19).toString());
+                weightRecords.setReserved3(query.value(20).toString());
+                weightRecords.setReserved4(query.value(21).toString());
+                weightRecords.setSpareWeight(query.value(22).toFloat());
+            }
+
+        }
+
+    }
+    database.close();
+    return weightRecords;
+}
+
+WeightRecords WeightRecordsImpl::selectWR2(QString carId)//根据记录id来查找整条记录//根据车号查找该车辆最新二次过磅记录
+{
+    WeightRecords weightRecords;
+    if(database.open())
+    {
+        qDebug()<<"database opened";
+        QSqlQuery query;
+
+        QString select_sql = "select * from WeightRecords where carId='" + carId+"' and ponderation=2 order by id desc limit 0,1";
+        query.prepare(select_sql);
+
+        if(!query.exec())
+        {
+             qDebug()<<query.lastError();
+        }
+        else
+        {
+            while(query.next())
+            {
+                weightRecords.setId(query.value(0).toInt());
+                weightRecords.setUserId(query.value(8).toInt());
+                weightRecords.setDate1(query.value(10).toString());
+                weightRecords.setDate2(query.value(12).toString());
+                weightRecords.setTime1(query.value(11).toString());
+                weightRecords.setTime2(query.value(13).toString());
+                weightRecords.setFactoryIn(query.value(6).toString());
+                weightRecords.setFactoryOut(query.value(7).toString());
+                weightRecords.setCarId(query.value(1).toString());
+                weightRecords.setArtId(query.value(2).toString());
+                weightRecords.setGrossWeight(query.value(3).toFloat());
+                weightRecords.setTare(query.value(4).toFloat());
+                weightRecords.setNetWeight(query.value(5).toFloat());
+                weightRecords.setDeduction(query.value(9).toFloat());
+                weightRecords.setMonitorId(query.value(14).toInt());
+                weightRecords.setRemark(query.value(17).toString());
+                weightRecords.setPonderation(query.value(16).toInt());
+                weightRecords.setComplete(query.value(15).toInt());
+                weightRecords.setReserved1(query.value(18).toString());
+                weightRecords.setReserved2(query.value(19).toString());
+                weightRecords.setReserved3(query.value(20).toString());
+                weightRecords.setReserved4(query.value(21).toString());
+                weightRecords.setSpareWeight(query.value(22).toFloat());
+            }
+
+        }
+
+    }
+    database.close();
+    return weightRecords;
 }

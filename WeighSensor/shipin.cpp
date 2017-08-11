@@ -15,6 +15,8 @@ Shipin::Shipin(QWidget *parent) :
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->oneFrame,SIGNAL(clicked()),this,SLOT(showOneFrame()));
     connect(ui->fourFrame,SIGNAL(clicked()),this,SLOT(showFourFrame()));
+    connect(ui->USBCamera,SIGNAL(clicked(QString)),this,SLOT(showtwoUSBFrame(QString)));
+    connect(ui->moniCamera,SIGNAL(clicked(QString)),this,SLOT(showtwoUSBFrame(QString)));
 }
 
 Shipin::~Shipin()
@@ -24,8 +26,8 @@ Shipin::~Shipin()
 
 void Shipin::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
@@ -33,6 +35,13 @@ void Shipin::returnPage()
 {
     Index *returnPage=new Index();
     returnPage->show();
+    this->close();
+}
+
+void Shipin::showtwoUSBFrame(QString name)
+{
+    Shipin_twousb *twousb = new Shipin_twousb(name);
+    twousb->show();
     this->close();
 }
 
@@ -55,3 +64,4 @@ void Shipin::showFourFrame()
     ui->widget_four->show();
     ui->widget_one->show();
 }
+

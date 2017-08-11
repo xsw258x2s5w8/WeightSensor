@@ -8,6 +8,8 @@ Buwanzheng_chaxun::Buwanzheng_chaxun(QWidget *parent) :
     ui(new Ui::Buwanzheng_chaxun)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
@@ -19,8 +21,8 @@ Buwanzheng_chaxun::~Buwanzheng_chaxun()
 
 void Buwanzheng_chaxun::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

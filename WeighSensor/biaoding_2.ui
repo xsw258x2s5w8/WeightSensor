@@ -118,6 +118,13 @@
          </widget>
         </item>
         <item>
+         <widget class="QLabel" name="label_steedyFlag">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="horizontalSpacer">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -169,7 +176,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit_Weigh"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_5">
@@ -192,7 +199,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="lineEdit_AllISN"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_7">

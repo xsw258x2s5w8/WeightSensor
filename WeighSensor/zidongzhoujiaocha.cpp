@@ -9,6 +9,8 @@ Zidongzhoujiaocha::Zidongzhoujiaocha(QWidget *parent) :
     ui(new Ui::Zidongzhoujiaocha)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->confirm,SIGNAL(clicked()),this,SLOT(showconfirmAxis()));
@@ -21,8 +23,8 @@ Zidongzhoujiaocha::~Zidongzhoujiaocha()
 
 void Zidongzhoujiaocha::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

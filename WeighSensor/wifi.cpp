@@ -8,6 +8,8 @@ Wifi::Wifi(QWidget *parent) :
     ui(new Ui::Wifi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     //tableview 里的东西
     ui->tableWidget->setWindowTitle("QTableWidget & Item");
     ui->tableWidget->resize(350, 200);  //设置表格
@@ -39,8 +41,8 @@ Wifi::~Wifi()
 
 void Wifi::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

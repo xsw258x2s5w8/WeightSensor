@@ -136,7 +136,7 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_23">
+       <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="1,1,1">
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
@@ -144,7 +144,7 @@
             <item>
              <widget class="QLabel" name="label_5">
               <property name="text">
-               <string>风度值：</string>
+               <string>分度值：</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -152,7 +152,43 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_4"/>
+             <widget class="QComboBox" name="comboBox_4">
+              <item>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>5</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>50</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>100</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -169,7 +205,28 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox"/>
+             <widget class="QComboBox" name="comboBox">
+              <item>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -186,7 +243,33 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_2"/>
+             <widget class="QComboBox" name="comboBox_2">
+              <item>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -203,7 +286,18 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_3"/>
+             <widget class="QComboBox" name="comboBox_3">
+              <item>
+               <property name="text">
+                <string>贸易</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>非贸易</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -220,7 +314,28 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_6"/>
+             <widget class="QComboBox" name="comboBox_6">
+              <item>
+               <property name="text">
+                <string>0d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3d</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -237,7 +352,58 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_5"/>
+             <widget class="QComboBox" name="comboBox_5">
+              <item>
+               <property name="text">
+                <string>0.0d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>0.5d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.0d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.5d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2.0d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2.5d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3.0d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3.5d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4.0d</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4.5d</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -255,7 +421,38 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_7"/>
+             <widget class="QComboBox" name="comboBox_7">
+              <item>
+               <property name="text">
+                <string>0%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>100%F.S</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -269,7 +466,38 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_8"/>
+             <widget class="QComboBox" name="comboBox_8">
+              <item>
+               <property name="text">
+                <string>0%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20%F.S</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>100%F.S</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -286,7 +514,18 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_9"/>
+             <widget class="QComboBox" name="comboBox_9">
+              <item>
+               <property name="text">
+                <string>t</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>kg</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -300,7 +539,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit"/>
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="text">
+               <string>300.00</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -314,7 +557,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_2"/>
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="text">
+               <string>0.00</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -328,7 +575,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_3"/>
+             <widget class="QLineEdit" name="lineEdit_3">
+              <property name="text">
+               <string>0.00</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -346,7 +597,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_4"/>
+             <widget class="QLineEdit" name="lineEdit_4">
+              <property name="text">
+               <string>100000.0</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -384,7 +639,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_5"/>
+             <widget class="QLineEdit" name="lineEdit_5">
+              <property name="text">
+               <string>1.00000</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -398,7 +657,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_6"/>
+             <widget class="QLineEdit" name="lineEdit_6">
+              <property name="text">
+               <string>999999.9</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -436,7 +699,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_7"/>
+             <widget class="QLineEdit" name="lineEdit_7">
+              <property name="text">
+               <string>1.00000</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

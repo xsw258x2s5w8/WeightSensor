@@ -9,6 +9,8 @@ Anzhuangceshi::Anzhuangceshi(QWidget *parent) :
     ui(new Ui::Anzhuangceshi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->information,SIGNAL(clicked()),this,SLOT(showInformation()));
@@ -21,8 +23,8 @@ Anzhuangceshi::~Anzhuangceshi()
 
 void Anzhuangceshi::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

@@ -2,6 +2,8 @@
 #define SHOUHOU_H
 
 #include <QWidget>
+#include <impl/afterservice.h>
+#include <impl/afterserviceimpl.h>
 
 namespace Ui {
 class Shouhou;
@@ -21,6 +23,12 @@ private:
 public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan
+
+private:
+    void showServiceData();//显示售后信息
+
+private:
+    AfterServiceImpl *afterServiceImpl;//售后服务数据接口
 };
 
 #endif // SHOUHOU_H

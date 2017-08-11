@@ -12,6 +12,8 @@ Tiaojiao::Tiaojiao(QWidget *parent) :
     ui(new Ui::Tiaojiao)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->setAngleValue,SIGNAL(clicked()),this,SLOT(showSetAngleValue()));

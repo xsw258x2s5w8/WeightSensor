@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,5,1">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
@@ -141,6 +141,13 @@
          <number>20</number>
         </property>
         <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>注：只选取勾选前6条记录</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="horizontalSpacer_7">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -153,37 +160,14 @@
           </property>
          </spacer>
         </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_11"/>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_7">
-          <property name="styleSheet">
-           <string notr="true">border-image: url(:/image/images/find.svg);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
        </layout>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QPushButton" name="pushButton_11">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_3">
+           <spacer name="horizontalSpacer_5">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -196,14 +180,24 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_9">
-            <property name="text">
-             <string>/\</string>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
             </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>205</width>
+               <height>211</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_10">
+           <spacer name="horizontalSpacer_6">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -218,17 +212,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTreeView" name="treeView"/>
-        </item>
-        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_14">
-          <item>
-           <widget class="QPushButton" name="pushButton_6">
-            <property name="text">
-             <string>增加</string>
-            </property>
-           </widget>
-          </item>
           <item>
            <spacer name="horizontalSpacer_11">
             <property name="orientation">
@@ -241,13 +225,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_10">
-            <property name="text">
-             <string>\/</string>
-            </property>
-           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_12">
@@ -313,7 +290,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="saveBtn">
        <property name="text">
         <string>保存</string>
        </property>

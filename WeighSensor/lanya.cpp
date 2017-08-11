@@ -7,6 +7,8 @@ Lanya::Lanya(QWidget *parent) :
     ui(new Ui::Lanya)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     //tableview 里的东西
     ui->tableWidget->setWindowTitle("QTableWidget & Item");
     ui->tableWidget->resize(350, 200);  //设置表格
@@ -39,8 +41,8 @@ Lanya::~Lanya()
 
 void Lanya::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

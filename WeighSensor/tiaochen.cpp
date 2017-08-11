@@ -11,12 +11,15 @@
 #include "anzhuangceshi.h"
 #include "caishubeifen.h"
 #include "canshuhuanyuan.h"
-
+#include "impl/authinterfaceimpl.h"
+#include <QMessageBox>
 Tiaochen::Tiaochen(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Tiaochen)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex_2,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->address,SIGNAL(clicked()),this,SLOT(showAddress()));
@@ -37,8 +40,8 @@ Tiaochen::~Tiaochen()
 
 void Tiaochen::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
@@ -51,16 +54,43 @@ void Tiaochen::returnPage()
 
 void Tiaochen::showAddress()
 {
-    Dizhi *showAddress=new Dizhi();
-    showAddress->show();
-    this->close();
+
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),2);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Dizhi *showAddress=new Dizhi();
+        showAddress->show();
+        this->close();
+    }
+
 }
 
 void Tiaochen::showAdjustAngle()
 {
-    Tiaojiao *showAddress=new Tiaojiao();
-    showAddress->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),3);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Tiaojiao *showAddress=new Tiaojiao();
+        showAddress->show();
+        this->close();
+    }
+
 }
 
 void Tiaochen::showBalanceState()
@@ -72,9 +102,21 @@ void Tiaochen::showBalanceState()
 
 void Tiaochen::showBalanceValue()
 {
-    Chengtaicanshu *showBalanceValue=new Chengtaicanshu();
-    showBalanceValue->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),5);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Chengtaicanshu *showBalanceValue=new Chengtaicanshu();
+        showBalanceValue->show();
+        //this->close();
+    }
 }
 
 void Tiaochen::showtiaochen_2()
@@ -86,9 +128,21 @@ void Tiaochen::showtiaochen_2()
 
 void Tiaochen::showCalibration()
 {
-    Biaoding *showCalibration=new Biaoding();
-    showCalibration->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),6);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Biaoding *showCalibration=new Biaoding();
+        showCalibration->show();
+        this->close();
+    }
 }
 
 void Tiaochen::showTest()
@@ -100,16 +154,40 @@ void Tiaochen::showTest()
 
 void Tiaochen::showBackup()
 {
-    Caishubeifen *showBackup=new Caishubeifen();
-    showBackup->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),8);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Caishubeifen *showBackup=new Caishubeifen();
+        showBackup->show();
+        this->close();
+    }
 }
 
 void Tiaochen::showRestore()
 {
-    Canshuhuanyuan *showRestore=new Canshuhuanyuan();
-    showRestore->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),8);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Canshuhuanyuan *showRestore=new Canshuhuanyuan();
+        showRestore->show();
+        this->close();
+    }
 }
 
 

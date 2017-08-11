@@ -8,6 +8,7 @@ Baobiaodayin::Baobiaodayin(QWidget *parent) :
     ui(new Ui::Baobiaodayin)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 
     //combox 属性条目
     QStringList strings;
@@ -27,8 +28,8 @@ Baobiaodayin::~Baobiaodayin()
 
 void Baobiaodayin::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

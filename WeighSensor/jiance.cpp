@@ -10,12 +10,17 @@
 #include "beiguangliangdu.h"
 #include "shouhou.h"
 #include "gongdianzhuangtai.h"
-
+#include "yibiaoxinxi_product.h"
+#include "shouhou_product.h"
+#include "impl/useraliveimpl.h"
+#include "impl/useralive.h"
 Jiance::Jiance(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Jiance)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->meterInformation,SIGNAL(clicked()),this,SLOT(showMeterInformation()));
@@ -36,8 +41,8 @@ Jiance::~Jiance()
 
 void Jiance::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
@@ -50,8 +55,19 @@ void Jiance::returnPage()
 
 void Jiance::showMeterInformation()
 {
-    Yibiaoxinxi *showMeterInformation=new Yibiaoxinxi();
-    showMeterInformation->show();
+    UserAliveImpl userimpl;
+    UserAlive user;
+    user = userimpl.getAuthorityInfo();
+    if(user.getAuthority()==3)
+    {
+        Yibiaoxinxi *showMeterInformation=new Yibiaoxinxi();
+        showMeterInformation->show();
+    }
+    else
+    {
+        Yibiaoxinxi_product *showProduct=new Yibiaoxinxi_product();//显示调秤商
+        showProduct->show();
+    }
     this->close();
 }
 
@@ -79,9 +95,9 @@ void Jiance::showStorage()
 
 void Jiance::showCheckVideo()
 {
+    //显示屏检测不许要关闭检测页面
     Xianshipingjiance *showCheckVideo=new Xianshipingjiance();
     showCheckVideo->show();
-    this->close();
 }
 
 void Jiance::showCheckLight()
@@ -93,8 +109,19 @@ void Jiance::showCheckLight()
 
 void Jiance::showService()
 {
-    Shouhou *showService=new Shouhou();
-    showService->show();
+    UserAliveImpl userimpl;
+    UserAlive user;
+    user = userimpl.getAuthorityInfo();
+    if(user.getAuthority()==3)
+    {
+        Shouhou *showService=new Shouhou();
+        showService->show();
+    }
+    else
+    {
+        Shouhou_product *showServiceProduct=new Shouhou_product();
+        showServiceProduct->show();
+    }
     this->close();
 }
 

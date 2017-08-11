@@ -8,6 +8,8 @@ Bangzhushouce1::Bangzhushouce1(QWidget *parent) :
     ui(new Ui::Bangzhushouce1)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
@@ -19,8 +21,8 @@ Bangzhushouce1::~Bangzhushouce1()
 
 void Bangzhushouce1::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

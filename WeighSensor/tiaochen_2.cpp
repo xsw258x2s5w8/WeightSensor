@@ -5,12 +5,15 @@
 #include "chaizai.h"
 #include "tongxunbaohu.h"
 #include "jiandingshijian.h"
-
+#include "impl/authinterfaceimpl.h"
+#include <QMessageBox>
 Tiaochen_2::Tiaochen_2(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Tiaochen_2)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex_2,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->preview,SIGNAL(clicked()),this,SLOT(showtiaochen()));
@@ -26,8 +29,8 @@ Tiaochen_2::~Tiaochen_2()
 
 void Tiaochen_2::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
@@ -47,16 +50,40 @@ void Tiaochen_2::showtiaochen()
 
 void Tiaochen_2::showOverload()
 {
-    Chaizai *showOverload=new Chaizai();
-    showOverload->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),10);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Chaizai *showOverload=new Chaizai();
+        showOverload->show();
+        this->close();
+    }
 }
 
 void Tiaochen_2::showCommunication()
 {
-    Tongxunbaohu *showCommunication=new Tongxunbaohu();
-    showCommunication->show();
-    this->close();
+    UserAlive useralive = useraliveimpl.getAuthorityInfo();
+
+    AuthInterfaceImpl auth;
+    int result = auth.isEnter(useralive.getUserId(),11);
+    if(result!=1)
+    {
+        QMessageBox::about(NULL, "失败", "权限不够！");
+        //this->show();
+    }
+    else
+    {
+        Tongxunbaohu *showCommunication=new Tongxunbaohu();
+        showCommunication->show();
+        this->close();
+    }
 }
 
 void Tiaochen_2::showCheck()

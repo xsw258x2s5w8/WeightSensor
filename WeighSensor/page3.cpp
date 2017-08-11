@@ -8,12 +8,15 @@
 #include "chushihua.h"
 #include "jiexianshiyitu.h"
 #include "bangzhushouce.h"
+#include "window.h"
 
 Page3::Page3(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Page3)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->preview,SIGNAL(clicked()),this,SLOT(showPreview()));
@@ -33,8 +36,8 @@ Page3::~Page3()
 
 void Page3::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
@@ -91,6 +94,9 @@ void Page3::showHelp()
 {
    Bangzhushouce *showHelp=new Bangzhushouce();
    showHelp->show();
+
+//   Window *showWindow=new Window();
+//   showWindow->show();
    this->close();
 }
 

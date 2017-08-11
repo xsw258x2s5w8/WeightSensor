@@ -153,7 +153,23 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox"/>
+          <widget class="QComboBox" name="comVideoshar">
+           <item>
+            <property name="text">
+             <string>普通</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>流畅</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>标清</string>
+            </property>
+           </item>
+          </widget>
          </item>
         </layout>
        </item>
@@ -167,9 +183,9 @@
           </widget>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_5">
+          <widget class="QCheckBox" name="checktakePic">
            <property name="text">
-            <string>CheckBox</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -185,7 +201,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7">
+          <widget class="QLineEdit" name="pressratio">
            <property name="text">
             <string>80</string>
            </property>
@@ -250,14 +266,14 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_21">
        <item>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="savevideoInfo">
          <property name="text">
           <string>保存</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_8">
+        <widget class="QPushButton" name="emptyInfo">
          <property name="text">
           <string>清空</string>
          </property>

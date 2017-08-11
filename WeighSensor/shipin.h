@@ -2,6 +2,7 @@
 #define SHIPIN_H
 
 #include <QWidget>
+#include "shipin_twousb.h"
 
 namespace Ui {
 class Shipin;
@@ -23,6 +24,8 @@ public slots:
     void returnPage();//返回上一页
     void showOneFrame();//显示一路画面
     void showFourFrame();//显示思路画面
+    void showtwoUSBFrame(QString name);//显示USB摄像头
+
 };
 
 #endif // SHIPIN_H

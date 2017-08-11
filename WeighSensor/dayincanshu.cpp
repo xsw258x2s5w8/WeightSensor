@@ -8,6 +8,7 @@ Dayincanshu::Dayincanshu(QWidget *parent) :
     ui(new Ui::Dayincanshu)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
     initialize();
 
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
@@ -59,8 +60,8 @@ Dayincanshu::~Dayincanshu()
 
 void Dayincanshu::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

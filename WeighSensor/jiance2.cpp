@@ -9,6 +9,8 @@ Jiance2::Jiance2(QWidget *parent) :
     ui(new Ui::Jiance2)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->preview,SIGNAL(clicked()),this,SLOT(showPreview()));
@@ -22,8 +24,8 @@ Jiance2::~Jiance2()
 
 void Jiance2::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

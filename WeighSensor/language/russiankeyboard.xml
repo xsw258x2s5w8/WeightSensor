@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE keyboard>
+<keyboard type="eng">
+  <key nr="1" text="й" caps="Й" num="1"/>
+  <key nr="2" text="ц" caps="Ц" num="2"/>
+  <key nr="3" text="у" caps="У" num="3"/>
+  <key nr="4" text="к" caps="К" num="4"/>
+  <key nr="5" text="е" caps="Е" num="5"/>
+  <key nr="6" text="н" caps="Н" num="6"/>
+  <key nr="7" text="г" caps="Г" num="7"/>
+  <key nr="8" text="ш" caps="Ш" num="8"/>
+  <key nr="9" text="щ" caps="Щ" num="9"/>
+  <key nr="10" text="з" caps="З" num=""/>
+  <key nr="37" text="х" caps="Х" num=""/>
+  <key nr="38" text="ъ" caps="Ъ" num=""/>
+
+  <key nr="11" text="ф" caps="Ф" num="~" />
+  <key nr="12" text="ы" caps="Ы" num="`" />
+  <key nr="13" text="в" caps="В" num="!" />
+  <key nr="14" text="а" caps="А" num="@" />
+  <key nr="15" text="п" caps="П" num="#" />
+  <key nr="16" text="р" caps="Р" num="$" />
+  <key nr="17" text="о" caps="О" num="%" />
+  <key nr="18" text="л" caps="Л" num="^" />
+  <key nr="19" text="д" caps="Д" num="-" />
+  <key nr="39" text="ж" caps="Ж" num="" />
+  <key nr="40" text="э" caps="Э" num="" />
+
+  <key nr="20" text="я" caps="Я" num="*" />
+  <key nr="21" text="ч" caps="Ч" num="(" />
+  <key nr="22" text="с" caps="С" num=")" />
+  <key nr="23" text="м" caps="М" num="[" />
+  <key nr="24" text="и" caps="И" num="]" />
+  <key nr="25" text="т" caps="Т" num="{" />
+  <key nr="26" text="ь" caps="Ь" num="}" />
+  <key nr="41" text="ё" caps="Ё" num="_" />
+  <key nr="42" text="=" caps="=" num="+" />
+  <key nr="27" text="б" caps="Б" num="" />
+  <key nr="28" text="ю" caps="Ю" num="" />
+
+  <key nr="29" text="\" caps="\" num="|" />
+  <key nr="30" text=";" caps=";" num=":" />
+  <key nr="31" text="&apos;" caps="&apos;" num="&quot;" />
+  <key nr="32" text="," caps="," num="&lt;" />
+  <key nr="33" text="." caps="." num="&gt;" />
+  <key nr="34" text="/" caps="/" num="?" />
+  <key nr="35" text="F1" caps="F1" num="F1" />
+  <key nr="36" text="Close" caps="Close" num="Close" />
+
+
+
+
+  <key nr="50" text="UP"/> 
+  <key nr="51" text="LEFT"/> 
+  <key nr="52" text="RIGHT"/> 
+  <key nr="53" text="DOWN"/> 
+  <key nr="54" text="BACK"/> 
+  <key nr="55" text="ENTER"/> 
+  <key nr="56" text="CAPS"/> 
+  <key nr="57" text="NUM"/> 
+  <key nr="58" text=""/>
+ 
+  <key nr="80" text="test"/> 
+</keyboard>

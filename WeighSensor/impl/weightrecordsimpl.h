@@ -31,6 +31,8 @@ public:
     int insertWeightRecords(WeightRecords weightrecords);//isfull 用来判断二次过磅时该车辆是空车还是载货，weightrecords为需要插入的记录
     int updateWeightRecords(WeightRecords weightrecords);//用来更新二次过磅的第二次过磅数据
     int replaceLastWeightRecords(WeightRecords weightrecords);//用来实现替换上次功能
+    WeightRecords selectWR1(QString carId);//根据记录id来查找整条记录//根据车号查找该车辆最新一次过磅记录
+    WeightRecords selectWR2(QString carId);//根据记录id来查找整条记录//根据车号查找该车辆最新二次过磅记录
 
 
 private:

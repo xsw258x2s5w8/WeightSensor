@@ -10,6 +10,8 @@ Wurenzhishou::Wurenzhishou(QWidget *parent) :
     ui(new Ui::Wurenzhishou)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->videoBtn,SIGNAL(clicked()),this,SLOT(showSetVideo()));
@@ -23,8 +25,8 @@ Wurenzhishou::~Wurenzhishou()
 
 void Wurenzhishou::returnIndex()
 {
-    Index *index=new Index();
-    index->show();
+//    Index *index=new Index();
+//    index->show();
     this->close();
 }
 

@@ -21,6 +21,8 @@ private:
 public slots:
     void returnIndex();//主页
     void returnPage();//返回上一页
+
+    void slotChooseBtn();//该槽判断 点击的按钮是哪个
 };
 
 #endif // PCDERS232_H

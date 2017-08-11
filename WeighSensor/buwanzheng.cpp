@@ -9,6 +9,7 @@ Buwanzheng::Buwanzheng(QWidget *parent) :
     ui(new Ui::Buwanzheng)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 
     //combox 属性条目
     QStringList strings;
@@ -29,8 +30,8 @@ Buwanzheng::~Buwanzheng()
 
 void Buwanzheng::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

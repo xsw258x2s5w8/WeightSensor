@@ -6,6 +6,8 @@ Huohaoshezhi::Huohaoshezhi(QWidget *parent) :
     ui(new Ui::Huohaoshezhi)
 {
     ui->setupUi(this);
+    //this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->store,SIGNAL(clicked()),this,SLOT(close()));
 }
 

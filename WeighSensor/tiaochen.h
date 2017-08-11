@@ -2,7 +2,7 @@
 #define TIAOCHEN_H
 
 #include <QWidget>
-
+#include "impl/useraliveimpl.h"
 namespace Ui {
 class Tiaochen;
 }
@@ -17,7 +17,7 @@ public:
     
 private:
     Ui::Tiaochen *ui;
-
+    UserAliveImpl useraliveimpl;
 public slots:
     void returnIndex();//zhuye
     void returnPage();//fanhuicaidan

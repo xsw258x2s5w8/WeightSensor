@@ -10,6 +10,8 @@ Erweimaguanli::Erweimaguanli(QWidget *parent) :
     ui(new Ui::Erweimaguanli)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage_2,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->generateQRcode,SIGNAL(clicked()),this,SLOT(showGenerateQR()));
@@ -23,8 +25,8 @@ Erweimaguanli::~Erweimaguanli()
 
 void Erweimaguanli::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

@@ -7,6 +7,7 @@ Shiboqi::Shiboqi(QWidget *parent) :
     ui(new Ui::Shiboqi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
@@ -19,8 +20,8 @@ Shiboqi::~Shiboqi()
 
 void Shiboqi::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

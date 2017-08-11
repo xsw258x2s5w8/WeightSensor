@@ -9,6 +9,8 @@ Ruanjiangengxin::Ruanjiangengxin(QWidget *parent) :
     ui(new Ui::Ruanjiangengxin)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->update,SIGNAL(clicked()),this,SLOT(showUpdate()));
@@ -21,8 +23,8 @@ Ruanjiangengxin::~Ruanjiangengxin()
 
 void Ruanjiangengxin::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

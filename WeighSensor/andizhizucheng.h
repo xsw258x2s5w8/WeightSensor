@@ -1,7 +1,10 @@
 #ifndef ANDIZHIZUCHENG_H
 #define ANDIZHIZUCHENG_H
 
+
+#include "lib/DataStruct.h"
 #include <QWidget>
+
 
 namespace Ui {
 class Andizhizucheng;

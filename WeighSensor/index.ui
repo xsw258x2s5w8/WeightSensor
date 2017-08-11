@@ -29,8 +29,8 @@
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,5,1">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,5,1">
+    <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
        <widget class="QPushButton" name="pushButton">
@@ -106,7 +106,7 @@
       </item>
      </layout>
     </item>
-    <item>
+    <item row="1" column="0">
      <widget class="QWidget" name="widget_2" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -240,14 +240,14 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="mylineedit" name="lineEdit_car">
+              <widget class="mylineedit" name="lineEdit_carId">
                <property name="text">
                 <string>浙B8888</string>
                </property>
               </widget>
              </item>
              <item row="0" column="3">
-              <widget class="mylineedit1" name="lineEdit_art">
+              <widget class="mylineedit1" name="lineEdit_artId">
                <property name="text">
                 <string>水果</string>
                </property>
@@ -281,7 +281,21 @@
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1">
            <item>
-            <widget class="myWidget" name="shipin" native="true"/>
+            <widget class="myWidget" name="shipin" native="true">
+             <widget class="QLabel" name="iplabel">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>270</width>
+                <height>96</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </widget>
            </item>
            <item>
             <widget class="QGraphicsView" name="graphicsView_2"/>
@@ -293,7 +307,7 @@
       </layout>
      </widget>
     </item>
-    <item>
+    <item row="2" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="menu">

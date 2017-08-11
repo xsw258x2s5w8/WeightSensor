@@ -11,6 +11,8 @@ Wangluoshezhi::Wangluoshezhi(QWidget *parent) :
     ui(new Ui::Wangluoshezhi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->setEthernet,SIGNAL(clicked()),this,SLOT(showEthernet()));
@@ -25,8 +27,8 @@ Wangluoshezhi::~Wangluoshezhi()
 
 void Wangluoshezhi::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

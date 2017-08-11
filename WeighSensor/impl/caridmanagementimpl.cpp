@@ -8,7 +8,8 @@ CarIdManagementImpl::CarIdManagementImpl()
     else
       this->database = QSqlDatabase::addDatabase("QSQLITE");
     //设置数据库
-    database.setDatabaseName("/home/hyl/Project/WeightSensor/WeighSensor/data/D28QT.db");
+    //database.setDatabaseName("/home/hyl/Project/WeightSensor/WeighSensor/data/D28QT.db");
+      database.setDatabaseName("/opt/sqlite/D28QT.db");
     //打开连接
     if( !database.open())
     {

@@ -8,6 +8,8 @@ Wangjimima::Wangjimima(QWidget *parent) :
     ui(new Ui::Wangjimima)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     //combox 属性条目
     QStringList strings;
     strings<<tr("user")<<tr("weigher")<<tr("producer");
@@ -24,8 +26,8 @@ Wangjimima::~Wangjimima()
 
 void Wangjimima::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 

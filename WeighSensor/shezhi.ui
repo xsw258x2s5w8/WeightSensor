@@ -143,7 +143,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="lineEdit_state">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -160,7 +164,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="lineEdit_address">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -177,7 +185,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="lineEdit_newAddress"/>
          </item>
         </layout>
        </item>
@@ -229,7 +237,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="dsfs">
+      <widget class="QPushButton" name="updatBtn">
        <property name="text">
         <string>修改</string>
        </property>

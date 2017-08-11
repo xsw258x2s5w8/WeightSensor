@@ -5,12 +5,16 @@
 #-------------------------------------------------
 
 QT       += core gui printsupport sql
+QT	+=xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = WeighSensor
 TEMPLATE = app
 
+#PKGCONFIG += poppler-qt4
+
+#CONFIG += c++11 link_pkgconfig
 
 SOURCES += main.cpp\
         index.cpp \
@@ -112,7 +116,53 @@ SOURCES += main.cpp\
     impl/caridmanagementimpl.cpp \
     impl/caridmanagement.cpp \
     impl/artidmanagementimpl.cpp \
-    impl/artidmanagement.cpp
+    impl/artidmanagement.cpp \
+    language/russianinputpanelcontext.cpp \
+    language/russianinputpanel.cpp \
+    language/myinputpannelcontext.cpp \
+    language/myinputpanel.cpp \
+    language/clicklabel.cpp \
+    language/chnpanel.cpp \
+    qrcodewidget.cpp \
+    impl/userimpl.cpp \
+    impl/useraliveimpl.cpp \
+    impl/useralive.cpp \
+    impl/user.cpp \
+    impl/interface.cpp \
+    impl/authinterfaceimpl.cpp \
+    impl/authinterface.cpp \
+    lib/documentwidget.cpp \
+    window.cpp \
+    lib/mydelegate.cpp \
+    impl/maininterfaceimpl.cpp \
+    impl/maininterface.cpp \
+    lib/mytableview.cpp \
+    impl/afterserviceimpl.cpp \
+    impl/afterservice.cpp \
+    impl/instinfoimpl.cpp \
+    impl/instinfo.cpp \
+    yibiaoxinxi_product.cpp \
+    shouhou_product.cpp \
+    impl/maininterfacetempimpl.cpp \
+    impl/maininterfacetemp.cpp \
+    shipin_twousb.cpp \
+    lib/clickedcam.cpp \
+    impl/rtspimpl.cpp \
+    impl/rtsp.cpp \
+    impl/ipconfigimpl.cpp \
+    impl/ipconfig.cpp \
+    impl/videosettingstempimpl.cpp \
+    impl/videosettingstemp.cpp \
+    impl/videosettingsimpl.cpp \
+    impl/videosettings.cpp \
+    dangexianshi.cpp \
+    lib/sensorisnthread.cpp \
+    lib/analysissensordata.cpp \
+    impl/sensorinfoimpl.cpp \
+    impl/sensorinfo.cpp \
+    lib/steedythread.cpp \
+    impl/weightplatformimpl.cpp \
+    impl/weightplatform.cpp
 
 HEADERS  += index.h \
     page2.h \
@@ -213,7 +263,55 @@ HEADERS  += index.h \
     impl/caridmanagementimpl.h \
     impl/caridmanagement.h \
     impl/artidmanagementimpl.h \
-    impl/artidmanagement.h
+    impl/artidmanagement.h \
+    language/russianinputpanelcontext.h \
+    language/russianinputpanel.h \
+    language/myinputpannelcontext.h \
+    language/myinputpanel.h \
+    language/clicklabel.h \
+    language/chnpanel.h \
+    qrcodewidget.h \
+    impl/userimpl.h \
+    impl/useraliveimpl.h \
+    impl/useralive.h \
+    impl/user.h \
+    impl/interface.h \
+    impl/authinterfaceimpl.h \
+    impl/authinterface.h \
+    lib/documentwidget.h \
+    window.h \
+    lib/mydelegate.h \
+    impl/maininterfaceimpl.h \
+    impl/maininterface.h \
+    lib/mytableview.h \
+    impl/afterserviceimpl.h \
+    impl/afterservice.h \
+    impl/instinfoimpl.h \
+    impl/instinfo.h \
+    yibiaoxinxi_product.h \
+    shouhou_product.h \
+    impl/maininterfacetempimpl.h \
+    impl/maininterfacetemp.h \
+    shipin_twousb.h \
+    lib/clickedcam.h \
+    impl/rtspimpl.h \
+    impl/rtsp.h \
+    impl/ipconfigimpl.h \
+    impl/ipconfig.h \
+    impl/videosettingstempimpl.h \
+    impl/videosettingstemp.h \
+    impl/videosettingsimpl.h \
+    impl/videosettings.h \
+    dangexianshi.h \
+    lib/DataStruct.h \
+    lib/sensorisnthread.h \
+    lib/Mymath.h \
+    lib/analysissensordata.h \
+    impl/sensorinfoimpl.h \
+    impl/sensorinfo.h \
+    lib/steedythread.h \
+    impl/weightplatformimpl.h \
+    impl/weightplatform.h
 
 FORMS    += index.ui \
     page2.ui \
@@ -298,9 +396,91 @@ FORMS    += index.ui \
     huohaoshezhi.ui \
     previewprint.ui \
     testpreviewdialogsetup.ui \
-    erciguobang_car.ui
+    erciguobang_car.ui \
+    language/russianinputpanelform.ui \
+    language/myinputpanelform.ui \
+    qrcode.ui \
+    window.ui \
+    yibiaoxinxi_product.ui \
+    shouhou_product.ui \
+    shipin_twousb.ui \
+    dangexianshi.ui
 
 TRANSLATIONS =WeighSensor.ts
 
 RESOURCES += \
     myimages.qrc
+
+#二维码PC
+#INCLUDEPATH += /usr/local/include
+#LIBS += -L/usr/local/lib -lqrencode
+
+unix:!macx: LIBS += -L$$PWD/../../../home/wl/libqrencode/lib/ -lqrencode
+
+INCLUDEPATH += $$PWD/../../../home/wl/libqrencode/include
+DEPENDPATH += $$PWD/../../../home/wl/libqrencode/include
+
+unix:!macx: LIBS += -L$$PWD/../../../home/wl/libpng/lib/ -lpng
+
+INCLUDEPATH += $$PWD/../../../home/wl/libpng/include
+DEPENDPATH += $$PWD/../../../home/wl/libpng/include
+
+#二维码ARM
+#INCLUDEPATH += /usr/local/qrencode-arm-linux/include
+#LIBS += -L/usr/local/qrencode-arm-linux/lib -lqrencode
+
+#unix:!macx: LIBS += -L$$PWD/../../usr/local/lib/ -lpng
+
+#INCLUDEPATH += $$PWD/../../usr/local/include
+#DEPENDPATH += $$PWD/../../usr/local/include
+
+#unix:!macx: LIBS += -L$$PWD/../../usr/local/qrencode-arm-linux/lib/ -lqrencode
+
+#INCLUDEPATH += $$PWD/../../usr/local/qrencode-arm-linux/include
+#DEPENDPATH += $$PWD/../../usr/local/qrencode-arm-linux/include
+
+#opencv-PC
+INCLUDEPATH += /usr/local/include \
+                /usr/local/include/opencv \
+                /usr/local/include/opencv2
+
+LIBS += /usr/local/lib/libopencv_*.so
+
+#opencv-ARM
+#INCLUDEPATH += /usr/local/opencv-arm/include \
+#                /usr/local/opencv-arm/include/opencv \
+#                /usr/local/opencv-arm/include/opencv2
+
+#LIBS += /usr/local/opencv-arm/lib/libopencv_*.so
+
+#pdf_PC
+INCLUDEPATH  += /usr/local/include/include/poppler/qt4
+LIBS         += -L/usr/local/include/include/lib -lpoppler-qt4
+
+unix:!macx: LIBS += -L$$PWD/../../../usr/local/include/lib/ -lpoppler-qt4
+
+INCLUDEPATH += $$PWD/../../../usr/local/include/include
+DEPENDPATH += $$PWD/../../../usr/local/include/include
+
+
+
+
+#unix:!macx: LIBS += -L$$PWD/../../../home/wl/protocal_terminal/ -lprotocal1
+
+#INCLUDEPATH += $$PWD/../../../home/wl/protocal_terminal
+#DEPENDPATH += $$PWD/../../../home/wl/protocal_terminal
+
+#OTHER_FILES += \
+#    lib/protocal_terminal/libprotocal1.so
+
+
+
+#unix:!macx: LIBS += -L$$PWD/../../../opt/qtcreator-2.6.2/lib/ -lprotocal1
+
+#INCLUDEPATH += $$PWD/../../../opt/qtcreator-2.6.2
+#DEPENDPATH += $$PWD/../../../opt/qtcreator-2.6.2
+
+#opencv-PC
+INCLUDEPATH += /home/wl/protocal_terminal/
+
+LIBS += /home/wl/protocal_terminal/libprotocal1.so

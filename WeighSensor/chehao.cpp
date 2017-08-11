@@ -6,6 +6,7 @@ Chehao::Chehao(QWidget *parent) :
     ui(new Ui::Chehao)
 {
     ui->setupUi(this);
+    //this->setWindowState(Qt::WindowFullScreen);
 }
 
 Chehao::~Chehao()

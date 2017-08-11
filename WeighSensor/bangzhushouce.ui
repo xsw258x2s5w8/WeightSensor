@@ -107,7 +107,7 @@
      <property name="styleSheet">
       <string notr="true">background-color: rgb(153, 211, 255);</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,0">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,8">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
@@ -123,16 +123,20 @@
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="myimages.qrc">:/image/images/mulu.png</pixmap>
-        </property>
-        <property name="scaledContents">
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="widgetResizable">
          <bool>true</bool>
         </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>640</width>
+           <height>263</height>
+          </rect>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>

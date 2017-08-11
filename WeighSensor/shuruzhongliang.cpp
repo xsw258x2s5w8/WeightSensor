@@ -8,6 +8,8 @@ Shuruzhongliang::Shuruzhongliang(QWidget *parent) :
     ui(new Ui::Shuruzhongliang)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
 }
@@ -19,8 +21,8 @@ Shuruzhongliang::~Shuruzhongliang()
 
 void Shuruzhongliang::returnIndex()
 {
-    Index *index=new Index();
-    index->show();
+//    Index *index=new Index();
+//    index->show();
     this->close();
 }
 

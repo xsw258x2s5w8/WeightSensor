@@ -12,11 +12,12 @@ Dizhi::Dizhi(QWidget *parent) :
     ui(new Ui::Dizhi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
+
     connect(ui->returnIndex,SIGNAL(clicked()),this,SLOT(returnIndex()));
     connect(ui->returnPage,SIGNAL(clicked()),this,SLOT(returnPage()));
     connect(ui->setSingleAddress,SIGNAL(clicked()),this,SLOT(showSingleAddress()));
     connect(ui->addressWeigh,SIGNAL(clicked()),this,SLOT(showAddressW()));
-    connect(ui->setSingleAddress,SIGNAL(clicked()),this,SLOT(showSingleAddress()));
     connect(ui->autoNetwork,SIGNAL(clicked()),this,SLOT(showautoNetwork()));
     connect(ui->number,SIGNAL(clicked()),this,SLOT(showNumber()));
 }
@@ -28,8 +29,8 @@ Dizhi::~Dizhi()
 
 void Dizhi::returnIndex()
 {
-    Index *menu=new Index();
-    menu->show();
+//    Index *menu=new Index();
+//    menu->show();
     this->close();
 }
 
